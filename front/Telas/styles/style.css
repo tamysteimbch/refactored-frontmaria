@@ -1,0 +1,157 @@
+body {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    font-family: Segoe UI;
+    background-color: #162874;
+    color: white;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+    "image image form"
+    "image image form"
+    "image image others";
+}
+
+.image {
+    grid-area: image;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+.main {
+    width: 100%;
+    height: auto;
+    padding: 0.7rem;
+}
+
+.form {
+    grid-area: form;
+    padding: 0.5rem;
+    padding-right: 1.3rem;
+}
+
+.tittle,
+.sub-tittle {
+    display: flex;
+    justify-content: space-around;  
+    padding-left: 1rem;
+}
+
+.tittle {
+    padding-top: 2rem;
+    line-height: 0.5rem;
+    font-size: 1rem;
+    font-family: Yu Gothic;
+}
+
+.sub-tittle {
+    line-height: 1px;
+    font-size: 0.6rem;
+    padding-left: 1rem;
+}
+
+.input-group {
+    padding-top: 5.5rem;
+}
+
+.t3 {
+    font-size: 0.7rem;
+    padding-left: 2.1rem;
+}
+
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    width: 83%;
+    padding-left: 1.8rem;
+    margin-top: 22px;
+}
+
+.input-box input {
+    background-color: #283D96;
+    padding: 8px;
+    border-radius: 5px;
+    border-color: white;
+}
+
+.input-box input:focus-visible{
+    outline: 1px solid white;
+}
+
+.input-box input::placeholder{
+    color: white;
+}
+
+.enter-button {
+    padding-top: 25px;
+    text-align: center;
+    padding-left: 1rem;
+}
+
+.enter-button button {
+    padding-right: 2.5rem;
+    background-color: #3F57B9;
+    height: 33px;
+    width: 50%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.enter-button button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+.form a {
+    color: white;
+    font-size: 0.8rem;
+    padding-left: 2rem;
+}
+
+
+.passw {
+    padding-top: 10px;
+    padding-left: 3.5rem;
+    padding-bottom: 6rem;
+}
+
+
+.others {
+    grid-area: others;
+}
+
+
+.others-tittle {
+    font-size: 0.8rem;
+    padding-left: 3rem;
+    line-height: 1.5rem;
+}
+
+
+.others-group ul {
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+.others-group ul a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.others-group ul a svg {
+    margin-right: 20px;
+}
