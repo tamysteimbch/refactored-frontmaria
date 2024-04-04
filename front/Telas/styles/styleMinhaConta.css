@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    font-family: Yu Gothic;
+    color: #2D3C7D;
+    font-style: bold;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "menu main-header main-header"
+    "menu main-hero main-hero"
+    "menu main-footer main-footer";   
+}
+
+.menu{
+    grid-area: menu;
+    width: 15rem;
+}
+
+.main-header{
+    grid-area: main-header;
+}
+
+.main-hero{
+    grid-area: main-hero;
+}
+
+.main-footer{
+    grid-area: main-footer;
+}
+
+.main{
+    background-color: #D0D4E6;
+}
+
+.main-header{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding-left: 3rem;
+    margin-top: -1rem;
+}
+
+.main-header h1 {
+    font-style: bold;
+    font-size: xxx-large;
+    margin-bottom: -0.5rem; 
+}
+
+.main-header h2 {
+    font-size: large;
+    padding-left: 0.4rem;
+}
+
+.main-header button {
+    background-color: #3F57B9;
+    border: none;
+    border-radius: 10rem;
+    height: 1rem;
+    display: flex; 
+    align-items: center; 
+    padding: 1.5rem;
+}
+
+.main-header button a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: large;
+    font-weight: bold;
+}
+
+.button {
+    padding-top: 2rem;
+    padding-right: 14rem;
+}
+
+.main-hero {
+    display: flex;
+    align-items: center; 
+    height: 28rem;
+    margin-top: -2rem;
+}
+
+.icon {
+    padding-left: 3rem;
+}
+
+.icon h2{
+    padding-left: 4rem;
+    margin-top: -0.5rem;
+}
+
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: small;
+}
+
+.info-block {
+    white-space: nowrap;
+    padding-left: 3rem;
+}
+
+.info {
+    margin-left: -3rem;    
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.25rem; 
+}
+
+.name h1,
+.fone h1,
+.email h1 {
+    margin-bottom: -0.1rem; 
+}
+
+.name h2,
+.fone h2,
+.email h2 {
+    margin-top: -0.1rem;
+    color: #5A6EC1;
+    padding-left: 0.5rem;
+    font-size: x-large;
+}
+
+.name h3,
+.fone h3,
+.email h3 {
+    margin-top: -1rem;
+}
+
+.email {
+    margin-top: -1rem;
+}
+
+.plant{
+    padding-left: 0.5rem;
+    opacity: 0.2; 
+    padding-top: 12rem;
+}
+
+.fone{
+    padding-left: 4rem;
+}
+
+.line {
+    height: 2px;
+    background-color: black;
+    width: 50%;
+    opacity: 20%;
+    margin-top: -1rem;
+    margin: 0;
+    font-family: Yu Gothic;
+    color: #2D3C7D;
+    font-style: bold;
+    margin-left: 18rem;
+}
+
+.main-footer{
+    display: flex;
+    align-items: center;
+}
+
+.school {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    margin-top: -3rem;
+    font-size: small;
+    padding-bottom: 3rem;
+}
+
+.school-info {
+    padding-top: 2rem;
+}
+
+.inst, .cellfone, .adress {
+    padding-left: 3rem;
+}
+
+.inst {
+    grid-column: 1 ; 
+    margin-top: -1rem;
+}
+
+.cellfone{
+    grid-column: 2; 
+    margin-left: -10rem;
+    margin-top: -1rem;
+}
+
+.inst h2, .cellfone h2, .adress h2 {
+    color: #5A6EC1;
+    padding-left: 0.5rem;
+    margin-top: -1rem;
+    font-size: x-large;
+}
+
+.adress{
+    margin-top: -2rem;
+}
+
+
