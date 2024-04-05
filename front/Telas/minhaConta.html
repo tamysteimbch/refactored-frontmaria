@@ -20,14 +20,14 @@
                 </div>
                
                 <div class="button">
-                    <button><a href="#">+ Adicionar nova questão</a></button>
+                    <button><a href="#" class="btn-link">+ Adicionar nova questão</a></button>
                 </div>
             </div>
 
             <div class="main-hero">
                 <div class="icon">
                     <img src="components/image.png" alt="Professora" style="width:200px">
-                    <h2>Editar</h2>
+                    <button><a href="#"></a>Editar</button>
                 </div>
                 
                 <div class="personal-info">
@@ -40,22 +40,22 @@
                         <div class="info-grid">
                             <div class="name">
                                 <h1>Nome</h1>
-                                <h2>Flávia da Silva</h2>
-                                <h3>Editar nome</h3>
+                                <textarea id="nomeTextarea" name="textarea" rows="1" cols="30" disabled>Flávia da Silva</textarea>
+                                <button id="editarNomeBtn">Editar nome</button>
                             </div>
                             <div class="fone">
                                 <h1>Telefone</h1>
-                                <h2>+55 41 99999-9999</h2>
-                                <h3>Editar telefone</h3>
+                                <textarea id="telefoneTextarea" name="textarea" rows="1" cols="30" disabled>+55 41 99999-9999</textarea>
+                                <button id="editarTelefoneBtn">Editar telefone</button>
                             </div>
                             <div class="email">
                                 <h1>Email</h1>
-                                <h2>flavia@escola.edu.br</h2>
-                                <h3>Editar email</h3>
+                                <textarea id="emailTextarea" name="textarea" rows="1" cols="30" disabled>flavia@escola.edu.br</textarea>
+                                <button id="editarEmailBtn">Editar email</button>
                             </div>
                         </div>
-                        </div>
                     </div>
+                </div>
                     
                 <div class="plant">
                     <img src="components/plantinhaa-Photoroom_prev_ui (1).png" alt="Planta" style="width: 500px">
@@ -88,5 +88,18 @@
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById("editarNomeBtn").addEventListener("click", function() {
+            document.getElementById("nomeTextarea").removeAttribute("disabled");
+        });
+
+        document.getElementById("editarTelefoneBtn").addEventListener("click", function() {
+            document.getElementById("telefoneTextarea").removeAttribute("disabled");
+        });
+
+        document.getElementById("editarEmailBtn").addEventListener("click", function() {
+            document.getElementById("emailTextarea").removeAttribute("disabled");
+        });
+    </script>
 </body>
 </html>
