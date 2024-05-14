@@ -28,10 +28,11 @@ export default function MainContent({
           <TbLayoutSidebarRightCollapseFilled />
         </button>
       )}
-
-      {mode === 'class' && <Classes />}
-      {mode === 'test' && <Exam />}
-      {mode === 'question' && <QuestionsDB />}
+      <div className="lg:mt-12 p-8">
+        {mode === 'class' && <Classes />}
+        {mode === 'test' && <Exam />}
+        {mode === 'question' && <QuestionsDB />}
+      </div>
     </main>
   );
 }
