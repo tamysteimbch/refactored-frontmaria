@@ -29,9 +29,10 @@ export default function MainContent({
         </button>
       )}
       <div className="lg:mt-12 p-8">
-        {mode === 'class' && <Classes />}
+        {mode === 'class' && <Classes setMode={setMode} />}
         {mode === 'test' && <Exam />}
         {mode === 'question' && <QuestionsDB />}
+        {mode === 'newExam' && <NewExam setMode={setMode} />}
       </div>
     </main>
   );
