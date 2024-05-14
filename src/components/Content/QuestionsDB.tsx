@@ -1,12 +1,7 @@
 import HeaderTitle from './components/HeaderTitle';
 import { FaPlus } from 'react-icons/fa';
-import { Mode } from '@/constants/sidebuttons';
 
-interface QuestionsDBProps {
-  setMode: (value: Mode) => void;
-}
-
-export default function QuestionsDB({ setMode }: QuestionsDBProps) {
+export default function QuestionsDB() {
   return (
     <div>
       <HeaderTitle
@@ -14,7 +9,6 @@ export default function QuestionsDB({ setMode }: QuestionsDBProps) {
         description="Veja quais questões estão disponíveis para uso!"
         buttonIcon={<FaPlus />}
         buttonTitle="Adicionar nova questão"
-        setMode={setMode}
       />
     </div>
   );
