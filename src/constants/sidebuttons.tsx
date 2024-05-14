@@ -3,7 +3,7 @@ import { LuNewspaper } from 'react-icons/lu';
 import { GoDatabase } from 'react-icons/go';
 import { IoMdNotificationsOutline } from 'react-icons/io';
 
-export type Mode = 'class' | 'test' | 'question' | 'notification';
+export type Mode = 'class' | 'test' | 'question' | 'notification' | 'newExam';
 
 type SideButton = {
   icon: React.ReactNode;
