@@ -18,6 +18,8 @@ import {
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import FlaviaImg from '@/assets/image.png';
 import sideButtons, { Mode } from '@/constants/sidebuttons';
+import { FaPlus } from 'react-icons/fa';
+import Modal from '../Modal';
 
 const FlaviaImgUrl = FlaviaImg.src;
 
@@ -54,6 +56,8 @@ interface MobileMenuProps {
 
 export default function MobileMenu({ setMode }: MobileMenuProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen: isModalOpen, onOpen: onModalOpen, onClose: onModalClose } = useDisclosure();
+
   return (
     <div className="lg:hidden block mb-12 text-white">
       <Box bg={useColorModeValue('#162874', 'gray.900')} px={4}>
@@ -69,12 +73,23 @@ export default function MobileMenu({ setMode }: MobileMenuProps) {
             <Box>
               <p className="text-2xl">MARIA</p>
             </Box>
-            <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
+            <HStack as={'nav'} spacing={1} display={{ base: 'none', md: 'flex' }}>
               {sideButtons.map((button) => (
                 <NavLink onClose={onClose} key={button.title} mode={button.mode} setMode={setMode}>
                   {button.title}
                 </NavLink>
               ))}
+              <Button
+                colorScheme="transparent"
+                variant="solid"
+                size="sm"
+                leftIcon={<FaPlus />}
+                onClick={onModalOpen}
+                className="hover:bg-tertiary"
+                fontSize="md"
+              >
+                Criar nova prova
+              </Button>
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
@@ -99,10 +114,31 @@ export default function MobileMenu({ setMode }: MobileMenuProps) {
                   {button.title}
                 </NavLink>
               ))}
+              <Button
+                colorScheme="transparent"
+                variant="solid"
+                size="sm"
+                leftIcon={<FaPlus />}
+                onClick={onModalOpen}
+                className="hover:bg-tertiary"
+                fontSize="md"
+              >
+                Criar nova prova
+              </Button>
             </Stack>
           </Box>
         ) : null}
       </Box>
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={onModalClose}
+        title="Teste"
+        button1Title="Fechar"
+        button1Action={onModalClose}
+      >
+        <p>Fala tu</p>
+      </Modal>
     </div>
   );
 }
