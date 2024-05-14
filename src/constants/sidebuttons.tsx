@@ -27,11 +27,6 @@ const sideButtons: SideButton[] = [
     title: 'Banco de questões',
     mode: 'question',
   },
-  {
-    icon: <IoMdNotificationsOutline />,
-    title: 'Notificações',
-    mode: 'notification',
-  },
 ];
 
 export default sideButtons;
