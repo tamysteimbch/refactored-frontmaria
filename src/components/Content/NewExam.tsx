@@ -1,20 +1,14 @@
 import HeaderTitle from './components/HeaderTitle';
 import { FaPlus } from 'react-icons/fa';
-import { Mode } from '@/constants/sidebuttons';
 
-interface NewExamProps {
-  setMode: (value: Mode) => void;
-}
-
-export default function NewExam({ setMode }: NewExamProps) {
+export default function NewExam() {
   return (
     <div>
       <HeaderTitle
-        title="Criar nova prova"
-        description="Selecione as questões disponíveis abaixo"
+        title="Provas"
+        description="Total 10 Provas"
         buttonIcon={<FaPlus />}
         buttonTitle="Adicionar nova questão"
-        setMode={setMode}
       />
     </div>
   );
