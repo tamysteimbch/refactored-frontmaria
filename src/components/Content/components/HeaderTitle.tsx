@@ -16,9 +16,9 @@ export default function HeaderTitle({
   setMode,
 }: HeaderTitleProps) {
   return (
-    <div className="flex md:flex-row flex-col gap-8 justify-center text-center md:justify-between items-center">
+    <div className="flex md:flex-row flex-col gap-8 justify-center text-center md:text-left md:justify-between items-center">
       <div className="flex flex-col md:gap-4 gap-1">
-        <p className="text-[3rem] text-primary">{title}</p>
+        <p className="text-[2.6rem] text-primary">{title}</p>
         <p className="text-lg text-tertiary">{description}</p>
       </div>
 
