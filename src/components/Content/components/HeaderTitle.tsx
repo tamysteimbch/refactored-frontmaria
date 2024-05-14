@@ -1,11 +1,11 @@
-import { Mode } from '@/constants/sidebuttons';
+import Modal from '@/components/Modal';
+import { useDisclosure } from '@chakra-ui/react';
 
 interface HeaderTitleProps {
   title: string;
   description: string;
   buttonTitle: string;
   buttonIcon: React.ReactNode;
-  setMode: (value: Mode) => void;
 }
 
 export default function HeaderTitle({
@@ -13,8 +13,8 @@ export default function HeaderTitle({
   description,
   buttonTitle,
   buttonIcon,
-  setMode,
 }: HeaderTitleProps) {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <div className="flex md:flex-row flex-col gap-8 justify-center text-center md:text-left md:justify-between items-center">
       <div className="flex flex-col md:gap-4 gap-1">
@@ -24,11 +24,21 @@ export default function HeaderTitle({
 
       <button
         className="flex justify-between items-center gap-4 bg-secondary hover:bg-tertiary text-white p-2 rounded-lg"
-        onClick={() => setMode('newExam')}
+        onClick={() => (isOpen ? onClose() : onOpen())}
       >
         <p>{buttonIcon}</p>
         <p>{buttonTitle}</p>
       </button>
+
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        title="Teste"
+        button1Title="Fechar"
+        button1Action={onClose}
+      >
+        <p>Fala tu</p>
+      </Modal>
     </div>
   );
 }
