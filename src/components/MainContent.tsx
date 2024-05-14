@@ -11,12 +11,18 @@ interface MainContentProps {
   isNavCollapsed: boolean;
   setIsNavCollapsed: (value: boolean) => void;
   mode: Mode;
+  setMode: (value: Mode) => void;
 }
 
-export default function MainContent({ isNavCollapsed, setIsNavCollapsed, mode }: MainContentProps) {
+export default function MainContent({
+  isNavCollapsed,
+  setIsNavCollapsed,
+  mode,
+  setMode,
+}: MainContentProps) {
   return (
     <main className="w-full bg-over">
-      <MobileMenu />
+      <MobileMenu setMode={setMode} />
       {isNavCollapsed && (
         <button className="flex my-4 text-3xl" onClick={() => setIsNavCollapsed(false)}>
           <TbLayoutSidebarRightCollapseFilled />
