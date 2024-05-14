@@ -1,8 +1,11 @@
+import { Mode } from '@/constants/sidebuttons';
+
 interface HeaderTitleProps {
   title: string;
   description: string;
   buttonTitle: string;
   buttonIcon: React.ReactNode;
+  setMode: (value: Mode) => void;
 }
 
 export default function HeaderTitle({
@@ -10,6 +13,7 @@ export default function HeaderTitle({
   description,
   buttonTitle,
   buttonIcon,
+  setMode,
 }: HeaderTitleProps) {
   return (
     <div className="flex justify-between items-center">
@@ -18,7 +22,10 @@ export default function HeaderTitle({
         <p className="text-lg text-tertiary">{description}</p>
       </div>
 
-      <button className="flex justify-between items-center gap-4 bg-secondary hover:bg-tertiary text-white p-2 rounded-lg">
+      <button
+        className="flex justify-between items-center gap-4 bg-secondary hover:bg-tertiary text-white p-2 rounded-lg"
+        onClick={() => setMode('newExam')}
+      >
         <p>{buttonIcon}</p>
         <p>{buttonTitle}</p>
       </button>
