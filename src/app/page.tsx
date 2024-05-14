@@ -19,6 +19,7 @@ export default function Home() {
         isNavCollapsed={isNavCollapsed}
         setIsNavCollapsed={setIsNavCollapsed}
         mode={mode}
+        setMode={setMode}
       />
     </div>
   );
