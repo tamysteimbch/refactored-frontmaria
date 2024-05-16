@@ -1,7 +1,6 @@
 import { MdOutlineClass } from 'react-icons/md';
 import { LuNewspaper } from 'react-icons/lu';
 import { GoDatabase } from 'react-icons/go';
-import { IoMdNotificationsOutline } from 'react-icons/io';
 
 export type Mode = 'class' | 'test' | 'question' | 'notification' | 'newExam';
 

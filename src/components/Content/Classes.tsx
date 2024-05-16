@@ -1,5 +1,6 @@
 import HeaderTitle from './components/HeaderTitle';
 import { FaPlus } from 'react-icons/fa';
+import Cards from './components/Cards';
 
 export default function Classes() {
   return (
@@ -10,6 +11,8 @@ export default function Classes() {
         buttonIcon={<FaPlus />}
         buttonTitle="Adicionar nova questão"
       />
+
+      <Cards />
     </div>
   );
 }
