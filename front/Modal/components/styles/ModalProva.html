@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/front/Modal/components/styles/styleModalprova.css">
+    <title>Modal</title>
+</head>
+<body>
+    <div class="modal-container">
+        <div class="modal-header">
+            <div class="close-btn">
+                <button><a href="#">Fechar</a></button>
+            </div>
+            <div class="mtittle">
+                <h1>Adicionar nova prova</h1>
+                <p>Aqui você pode gerar a sua prova, o gabarito (opcional) e salvá-la <br> em sua conta!</p>
+            </div>
+        </div>
+        
+        <div class="modal-hero">
+            <div class="date">
+                <p>Data da prova</p>
+                <input type="text" name="date" id="date-inp" value="01 de maio de 2024">
+            </div>
+            <div class="class">
+                <p>Turma</p>
+                <select id="class-op" name="opcao">
+                    <option value="valor1">6ºA</option>
+                    <option value="valor2">6ºB</option>
+                    <option value="valor3">7ºA</option>
+                </select>
+            </div>
+            <div class="mat">
+                <p>Matéria</p>
+                <select id="mat-op" name="opcao">
+                    <option value="valor1">História</option>
+                    <option value="valor2">Matemática</option>
+                    <option value="valor3">Geografia</option>
+                </select>
+            </div>
+            <div class="cont">
+                <p>Conteúdo</p>
+                <input type="text" name="cont" id="cont-inp" value="Ex: Egito">
+            </div>
+            <div class="cabe">
+                <p>Cabeçalho</p>
+                <select id="cabe-op" name="opcao">
+                    <option value="valor1">Escola Tarcila do Ama...</option>
+                    <option value="valor2"></option>
+                    <option value="valor3"></option>
+                </select>
+            </div>
+    
+            <div class="dif">
+                <p>Dificuldade</p>
+                <button id="easy-btn"><a href="#">Fácil</a></button>
+                <button id="med-btn"><a href="#">Médio</a></button>
+                <button id="hard-btn"><a href="#">Difícil</a></button>
+            </div>
+    
+            <input type="checkbox" id="gaba-inp" name="gaba" value="valor">
+            <label for="gaba">Gerar gabarito</label>
+            
+            <input type="checkbox" id="comp-inp" name="comp" value="valor">
+            <label for="comp">Compartilhar com outros professores</label>
+        </div>
+        
+        <div class="modal-footer">
+            <div class="clean-btn">
+                <button><a href="#">Limpar</a></button>
+            </div>
+    
+            <div class="make-btn">
+                <button><a href="#">Criar prova</a></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
