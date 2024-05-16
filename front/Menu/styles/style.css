@@ -1,40 +1,17 @@
 body {
-    margin: 0px;
-    width: 100%;
+    margin: 0;
+    width: 18rem;
     font-family: Segoe UI;
     color: #FFFFFF;
-}
-
-.container{
-    display: grid;
-    grid-template-areas:
-    "menu-header space space"
-    "menu-hero space space"
-    "menu-footer space space";
-}
-
-.menu-header{
-    grid-area: menu-header;
-}
-
-.menu-hero{
-    grid-area: menu-hero;
-}
-
-.menu-footer{
-    grid-area: menu-footer;
-}
-
-.space{
-    grid-area: space;
-    height: 100%;
-    width: auto;
+    overflow-y: hidden;
+    height: auto;
 }
 
 .menu{
     height: 100%;
-    width: 50%;
+    width: 100%;
     background-color: #162874;
+    overflow: hidden;
 }
 
 .menu-header{
@@ -43,7 +20,6 @@ body {
     align-items: center;
     flex-direction: column;
     padding-top: 2.5rem;
-    
 }
 
 .menu-header h1{
@@ -65,8 +41,8 @@ body {
 
 .button button{
     background-color: #3F57B9;
-    height: 2.5rem;
-    width: 12rem;
+    height: 3rem;
+    width: 13rem;
     border: none;
     border-radius: 10px;
 }
@@ -89,7 +65,7 @@ body {
 }
 
 .others ul li {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .others ul a {
@@ -106,17 +82,19 @@ body {
     display: flex;
     padding-top: 11rem;
     align-items: center;
-    justify-content: space-around;
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
 }
 
 .menu-footer img{
+    margin-bottom: -1rem;
     height: 80px;
     width: auto;
+    margin-left: 1rem;
 }
 
 .menu-footer p{
-    margin-right: 3rem;
+    margin-bottom: -0.2rem;
+    margin-left: 1rem;
     font-weight: bold;
 }
 
@@ -127,6 +105,9 @@ body {
     height: 1rem;
     display: flex; 
     align-items: end; 
+    margin-bottom: -1.2rem;
+    width: 2.9rem;
+    margin-left: 2rem;
 }
 
 .menu-footer button a{
