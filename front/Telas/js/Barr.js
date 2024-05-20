@@ -7,17 +7,17 @@ document.addEventListener("DOMContentLoaded", function() {
   let startX;
   let scrollLeft;
 
-  // Adiciona um evento de rolagem para atualizar a posição da alça
   carrosselContainer.addEventListener("scroll", updateScrollbarThumbPosition);
+  scrollbarThumb.addEventListener("mousedown", onMouseDown);
 
-  scrollbarThumb.addEventListener("mousedown", function(e) {
+  function onMouseDown(e) {
     isDragging = true;
     startX = e.clientX - scrollbarThumb.getBoundingClientRect().left;
     scrollLeft = carrosselContainer.scrollLeft;
 
     document.addEventListener("mousemove", onMouseMove);
     document.addEventListener("mouseup", onMouseUp);
-  });
+  }
 
   function onMouseMove(e) {
     if (!isDragging) return;
@@ -27,12 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const scrollDistance = dragDistance * (carrosselContainer.scrollWidth / scrollbar.clientWidth);
     carrosselContainer.scrollLeft = scrollLeft + scrollDistance;
     updateScrollbarThumbPosition();
-
-    // Adiciona console.log para verificar valores das variáveis
-    console.log("x:", x);
-    console.log("dragDistance:", dragDistance);
-    console.log("scrollDistance:", scrollDistance);
-    console.log("carrosselContainer.scrollLeft:", carrosselContainer.scrollLeft);
   }
 
   function onMouseUp() {
@@ -47,9 +41,5 @@ document.addEventListener("DOMContentLoaded", function() {
     const scrollPercentage = carrosselContainer.scrollLeft / (carrosselContainer.scrollWidth - carrosselContainer.clientWidth);
     const thumbPosition = scrollPercentage * (scrollbar.clientWidth - scrollbarThumb.clientWidth);
     scrollbarThumb.style.left = thumbPosition + 'px';
-
-    // Adiciona console.log para verificar valores das variáveis
-    console.log("scrollPercentage:", scrollPercentage);
-    console.log("thumbPosition:", thumbPosition);
   }
 });

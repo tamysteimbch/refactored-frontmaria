@@ -1,40 +1,18 @@
 body {
-    margin: 0px;
-    width: 100%;
+    margin: 0;
+    width: 18rem;
     font-family: Segoe UI;
     color: #FFFFFF;
-}
-
-.container{
-    display: grid;
-    grid-template-areas:
-    "menu-header space space"
-    "menu-hero space space"
-    "menu-footer space space";
-}
-
-.menu-header{
-    grid-area: menu-header;
-}
-
-.menu-hero{
-    grid-area: menu-hero;
-}
-
-.menu-footer{
-    grid-area: menu-footer;
-}
-
-.space{
-    grid-area: space;
+    overflow-y: hidden;
+    height: auto;
     height: 100%;
-    width: auto;
 }
 
 .menu{
     height: 100%;
-    width: 50%;
+    width: 100%;
     background-color: #162874;
+    overflow: hidden;
 }
 
 .menu-header{
@@ -43,7 +21,6 @@ body {
     align-items: center;
     flex-direction: column;
     padding-top: 2.5rem;
-    
 }
 
 .menu-header h1{
@@ -54,6 +31,7 @@ body {
 .menu-header h2{
     color: #999999;
     font-size: small;
+    font-weight: 400;
 }
 
 .menu-hero{
@@ -65,8 +43,8 @@ body {
 
 .button button{
     background-color: #3F57B9;
-    height: 2.5rem;
-    width: 12rem;
+    height: 3rem;
+    width: 13rem;
     border: none;
     border-radius: 10px;
 }
@@ -79,61 +57,51 @@ body {
 }
 
 .others{
-    padding-top: 1rem;
+    padding-top: 0.5rem;
 }
 
-.others ul {
-    list-style-type: none; 
-    padding: 0;
-    padding-left: 1rem;
+.btn-mt button, .btn-mp button, .btn-bq button, .btn-n button{
+    background-color: transparent;
+    border: none;
+    margin-top: 1.5rem;
 }
 
-.others ul li {
-    margin-bottom: 1rem;
-}
-
-.others ul a {
-    color: white;
+.btn-mt a, .btn-bq a, .btn-mp a, .btn-n a {
+    font-family: Segoe UI;
+    font-weight: 500;
+    font-size: 1.1rem;
     text-decoration: none;
+    color: white;
 }
 
-.others ul li a i {
-    margin-right: 0.5rem;
-    font-size: 1.4rem;
+.btn-bq img, .btn-mp img, .btn-mt img, .btn-n img {
+    margin-bottom: -0.5rem;
 }
 
 .menu-footer{
     display: flex;
     padding-top: 11rem;
     align-items: center;
-    justify-content: space-around;
-    padding-bottom: 1rem;
+    padding-bottom: 5rem;
 }
 
 .menu-footer img{
+    margin-bottom: -1rem;
     height: 80px;
     width: auto;
+    margin-left: 1rem;
 }
 
 .menu-footer p{
-    margin-right: 3rem;
+    margin-bottom: -0.2rem;
+    margin-left: 1rem;
     font-weight: bold;
 }
 
 .btn-footer {
-    background-color: #3F57B9;
+    background-color: transparent;
     border: none;
-    border-radius: 5px;
-    height: 1rem;
-    display: flex; 
-    align-items: end; 
-}
-
-.menu-footer button a{
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: x-large;
-    font-weight: bold;
+    margin-bottom: -0.4rem;
 }
 
 @media only screen and (max-width: 1080px) {
