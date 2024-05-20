@@ -9,9 +9,26 @@ function truncateText(text: string, maxLength: number): string {
   return text;
 }
 
-export default function CardExam(props: ExamContent) {
+interface CardExamProps extends ExamContent {
+  setSelecteds?: (selecteds: number[]) => void;
+  selecteds?: number[];
+}
+
+export default function CardExam(props: CardExamProps) {
+  const isSelected = props.selecteds?.includes(props.id);
+
+  const handleSelectClick = () => {
+    if (props.setSelecteds) {
+      if (isSelected) {
+        props.setSelecteds(props.selecteds?.filter((id) => id !== props.id) || []);
+      } else {
+        props.setSelecteds([...(props.selecteds || []), props.id]);
+      }
+    }
+  };
+
   return (
-    <div className="pb-10 rounded-lg" style={{ backgroundColor: props.color }}>
+    <div className={`pb-10 rounded-lg`} style={{ backgroundColor: props.color }}>
       <div className="flex flex-col justify-between p-4 bg-white h-[16rem] relative rounded-lg text-black">
         <div className="flex justify-between items-center">
           <div className="flex flex-col gap-2 ">
@@ -24,9 +41,12 @@ export default function CardExam(props: ExamContent) {
           <div className="flex flex-col gap-2 text-center">
             <button
               type="button"
-              className="bg-secondary text-white p-2 border-[3px] rounded-lg border-white hover:bg-primary"
+              className={`${
+                isSelected ? 'bg-red-600 hover:bg-red-800' : 'bg-secondary hover:bg-primary'
+              } text-white p-2 border-[3px] rounded-lg border-white `}
+              onClick={handleSelectClick}
             >
-              Selecionar
+              {isSelected ? 'Remover' : 'Selecionar'}
             </button>
 
             <button className="text-[12px] text-primary hover:text-secondary">

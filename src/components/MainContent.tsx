@@ -31,7 +31,7 @@ export default function MainContent({
         {mode === 'class' && <Classes />}
         {mode === 'test' && <ExamList />}
         {mode === 'question' && <QuestionsDB />}
-        {mode === 'newExam' && <NewExam />}
+        {mode === 'newExam' && <NewExam setMode={setMode} />}
       </div>
     </main>
   );

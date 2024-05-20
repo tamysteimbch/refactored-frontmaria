@@ -1,4 +1,5 @@
 export type ExamContent = {
+  id: number;
   level: string;
   description: string;
   color: string;
@@ -7,6 +8,7 @@ export type ExamContent = {
 
 const examContent: ExamContent[] = [
   {
+    id: 1,
     level: 'Difícil',
     description:
       'lore ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
@@ -14,6 +16,7 @@ const examContent: ExamContent[] = [
     hasImage: true,
   },
   {
+    id: 2,
     level: 'Fácil',
     description:
       'lore ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
@@ -21,6 +24,7 @@ const examContent: ExamContent[] = [
     hasImage: false,
   },
   {
+    id: 3,
     level: 'Médio',
     description:
       'lore ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
@@ -28,6 +32,7 @@ const examContent: ExamContent[] = [
     hasImage: true,
   },
   {
+    id: 4,
     level: 'Fácil',
     description:
       'lore ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
@@ -35,6 +40,7 @@ const examContent: ExamContent[] = [
     hasImage: false,
   },
   {
+    id: 5,
     level: 'Médio',
     description:
       'lore ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
@@ -42,6 +48,7 @@ const examContent: ExamContent[] = [
     hasImage: true,
   },
   {
+    id: 6,
     level: 'Difícil',
     description:
       'lore ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
@@ -49,6 +56,7 @@ const examContent: ExamContent[] = [
     hasImage: false,
   },
   {
+    id: 7,
     level: 'Médio',
     description:
       'lore ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
@@ -56,6 +64,7 @@ const examContent: ExamContent[] = [
     hasImage: true,
   },
   {
+    id: 8,
     level: 'Difícil',
     description:
       'lore ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
@@ -63,6 +72,7 @@ const examContent: ExamContent[] = [
     hasImage: false,
   },
   {
+    id: 9,
     level: 'Fácil',
     description:
       'lore ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
