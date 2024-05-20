@@ -37,7 +37,7 @@ export default function HeaderTitle({
         button1Title="Fechar"
         button1Action={onClose}
       >
-        <p>Fala tu</p>
+        <p>Fala tututu</p>
       </Modal>
     </div>
   );
