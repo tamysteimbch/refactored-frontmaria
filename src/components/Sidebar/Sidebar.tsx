@@ -22,7 +22,7 @@ export default function Sidebar({ isNavCollapsed, setIsNavCollapsed, setMode }: 
             <TbLayoutSidebarLeftCollapseFilled />
           </button>
           <Title />
-          <CreateExamBtn />
+          <CreateExamBtn setMode={setMode} />
           <ButtonsList setMode={setMode} />
         </div>
 
