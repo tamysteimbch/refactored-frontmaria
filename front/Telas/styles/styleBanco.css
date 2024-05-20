@@ -348,98 +348,20 @@ body {
     width: 23rem;
 }
 
-.footer {
-    display: flex;
-    flex-direction: row;
-    margin-top: 0.5rem;
-    padding-bottom: 1rem;
-}
-
-.btn-canceSlc {
-    margin-left: 1rem;
-    margin-top: -1rem;
-}
-
-.btn-cance {
-    padding-left: 26rem;
-    margin-top: -1rem;
-}
-
-.btn-prova {
-    margin-left: 1rem;
-    margin-top: -1.3rem;
-}
-
-.btn-canceSlc button {
-    font-family: Yu Gothic;
-    display: inline-block;
-    background-color: transparent;
-    cursor: pointer;
-    background-color: transparent;
-    padding: 0.2rem;
-    border-width: 0.3rem;
-    border-color: #2D3C7D;
-    border-radius: 8rem;
-    width: 11rem;
-    border-style: solid;
-}
-
-.btn-canceSlc a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #2D3C7D;
-}
-
-.btn-cance button {
-    font-family: Yu Gothic;
-    display: inline-block;
-    background-color: transparent;
-    cursor: pointer;
-    padding: 0.2rem;
-    border-width: 0.2rem;
-    border-color: #FF1800;
-    border-radius: 8rem;
-    width: 7rem;
-    border-style: solid;
-}
-
-.btn-cance a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #FF1800;
-}
-
-.btn-prova button {
-    font-family: Yu Gothic;
-    display: inline-block;
-    background-color: #31C456;
-    border: none;
-    cursor: pointer;
-    padding: 0.4rem;
-    border-radius: 10rem;
-    width: 9rem;
-}
-
-.btn-prova a {
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    font-size: medium;
-}
-
-/* Modal Prova */
+/* Modal Questão */
 
 dialog {
     border: none;
     padding: 0;
     border-radius: 1rem;
+    overflow-y: hidden;
 }
 
 .modal-container {
     font-weight: lighter;
     background-color: white;
-    height: 36rem;
-    width: 40rem;
+    height: 39rem;
+    width: 38rem;
     font-family: Yu gothic;
     border-radius: 1rem;
     color: #707070;
@@ -449,32 +371,37 @@ dialog {
 .modal-header {
     background-color: #D0D4E6;
     align-items: center;
-    height: 12rem;
+    height: 9rem;
     overflow: hidden;
 }
 
+.modal-header img {
+    margin-left: 0.5rem;
+}
+
 .mtittle {
-    margin-top: -18rem;
-    margin-left: 4rem;
+    margin-top: -15rem;
+    margin-left: 3.5rem;
     color: #162874;
 }
 
 .mtittle h1 {
-    font-size: 2.4rem;
-    margin-left: 3.5rem;
+    font-size: 1.6rem;
+    margin-left: 6rem;
+    margin-top: 2.5rem;
 }
 
 .mtittle p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: medium;
     text-align: center;
-    margin-left: -4.8rem;
+    margin-left: -4rem;
     margin-top: -1rem;
 }
 
 .close-btn {
     float: right;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     margin-right: 2rem;
 }
 
@@ -498,27 +425,31 @@ dialog {
 }
 
 .modal-hero {
-    margin-left: 3rem;
+    margin-left: 2.4rem;
+    margin-top: -0.5rem;
 }
 
-.date input {
-    padding: 0.4rem;
-    width: 9rem;
-    border-radius: 0.4rem;
-    border-color: #162874;
-    border-style: solid;
-    border-width: 0.1rem;
+.enun p {
+    font-size: larger;
+    margin-bottom: -0.01rem;
+}
+
+textarea#enun {
+    width: 33rem;
+    height: 5rem; 
+    border: 1px solid #162874;
+    border-radius: 1rem;
+    font-size: small;
+    resize: none; 
     color: #707070;
 }
 
-.date p {
-    margin-bottom: -0.1rem;
-    font-size: large;
+.ques-inp {
+    margin-top: 0.5rem;
 }
 
 .class {
     margin-left: 14rem;
-    margin-top: -4.5rem;
 }
 
 .class p {
@@ -527,7 +458,8 @@ dialog {
 }
 
 .class select {
-    padding: 0.4rem;
+    width: 4.5rem;
+    padding: 0.35rem;
     border-radius: 0.4rem;
     border-color: #162874;
     border-style: solid;
@@ -557,10 +489,11 @@ dialog {
 
 .cont {
     padding-top: 0.5rem;
+    margin-top: -5.4rem;
 }
 
 .cont p {
-    margin-bottom: -0.1rem;
+    margin-bottom: -0.01rem;
     font-size: large;
 }
 
@@ -574,87 +507,92 @@ dialog {
     color: #707070;
 }
 
-.cabe {
-    margin-top: 2rem;
-}
-
-.cabe p {
-    margin-bottom: -0.1rem;
-    font-size: large;
-}
-
-.cabe select {
-    padding: 0.4rem;
-    width: 11rem;
-    border-radius: 0.4rem;
-    border-color: #162874;
-    border-style: solid;
-    border-width: 0.1rem;
-    color: #707070;
-}
-
-.dif {
-    margin-left: 21rem;
-    margin-top: -11rem;
-}
-
 .dif p {
     font-size: large;
     margin-bottom: -0.1rem;
 }
 
+.dif button:not(:last-child) {
+    margin-right: -3px; 
+}
+
 #easy-btn{
     background-color: #31C456;
-    padding: 1rem;
+    padding: 0.8rem;
     border: none;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
+    width: 3.5rem;
+    margin-top: 0.5rem;
 }
 
 #easy-btn a {
     text-decoration: none;
     font-weight: bold;
     color: white;
+    margin-left: 0.1rem;
 }
 
 #med-btn{
     background-color: #FBCB23;
-    padding: 1rem;
+    padding: 0.8rem;
     border: none;
+    width: 3.5rem;
 }
 
 #med-btn a {
     text-decoration: none;
     font-weight: bold;
     color: white;
+    margin-left: -0.15rem;
 }
 
 #hard-btn{
     background-color: #E74C3C;
-    padding: 1rem;
+    padding: 0.8rem;
     border: none;
     border-top-right-radius:0.5rem ;
     border-bottom-right-radius: 0.5rem;
+    width: 3.5rem;
 }
 
 #hard-btn a {
     text-decoration: none;
     font-weight: bold;
     color: white;
-}
-
-.gaba-inp {
-    margin-left: 20rem;
-    margin-top: 2rem;
+    margin-left: -0.15rem;
 }
 
 .comp-inp {
-    padding-left: 20rem;
-    margin-top: 0.5rem;
+    margin-top: 2rem;
 }
 
-.comp-inp, .gaba-inp {
+.comp-inp, .ques-inp {
     font-size: small;
+}
+
+.img-inp {
+    font-size: large;
+    margin-left: 21rem;
+    margin-top: -5.7rem;
+}
+
+.img-inp p{
+    margin-bottom: -0.2rem;
+}
+
+.img-inp input {
+    color: #162874;
+}
+
+.img-inp label {
+    color: #162874;
+    font-size: small;
+}
+
+.img-inp img {
+    margin-bottom: -0.3rem;
+    margin-left: 0.4rem;
 }
 
 .clean-btn {
@@ -680,7 +618,7 @@ dialog {
 }
 
 .make-btn {
-    margin-right: 4rem;
+    margin-right: 3rem;
 }
 
 .make-btn button {
@@ -689,9 +627,9 @@ dialog {
     background-color: #31C456;
     border: none;
     cursor: pointer;
-    padding: 0.3rem;
+    padding: 0.23rem;
     border-radius: 10rem;
-    width: 9rem;
+    width: 11rem;
 }
 
 .make-btn a {
@@ -704,5 +642,6 @@ dialog {
 .modal-footer {
     display: flex;
     justify-content: space-between;
-    padding-top: 3rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
 }

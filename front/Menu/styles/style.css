@@ -5,6 +5,7 @@ body {
     color: #FFFFFF;
     overflow-y: hidden;
     height: auto;
+    height: 100%;
 }
 
 .menu{
@@ -30,6 +31,7 @@ body {
 .menu-header h2{
     color: #999999;
     font-size: small;
+    font-weight: 400;
 }
 
 .menu-hero{
@@ -55,34 +57,32 @@ body {
 }
 
 .others{
-    padding-top: 1rem;
+    padding-top: 0.5rem;
 }
 
-.others ul {
-    list-style-type: none; 
-    padding: 0;
-    padding-left: 1rem;
+.btn-mt button, .btn-mp button, .btn-bq button, .btn-n button{
+    background-color: transparent;
+    border: none;
+    margin-top: 1.5rem;
 }
 
-.others ul li {
-    margin-bottom: 1.5rem;
-}
-
-.others ul a {
-    color: white;
+.btn-mt a, .btn-bq a, .btn-mp a, .btn-n a {
+    font-family: Segoe UI;
+    font-weight: 500;
+    font-size: 1.1rem;
     text-decoration: none;
+    color: white;
 }
 
-.others ul li a i {
-    margin-right: 0.5rem;
-    font-size: 1.4rem;
+.btn-bq img, .btn-mp img, .btn-mt img, .btn-n img {
+    margin-bottom: -0.5rem;
 }
 
 .menu-footer{
     display: flex;
     padding-top: 11rem;
     align-items: center;
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
 }
 
 .menu-footer img{
@@ -99,22 +99,9 @@ body {
 }
 
 .btn-footer {
-    background-color: #3F57B9;
+    background-color: transparent;
     border: none;
-    border-radius: 5px;
-    height: 1rem;
-    display: flex; 
-    align-items: end; 
-    margin-bottom: -1.2rem;
-    width: 2.9rem;
-    margin-left: 2rem;
-}
-
-.menu-footer button a{
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: x-large;
-    font-weight: bold;
+    margin-bottom: -0.4rem;
 }
 
 @media only screen and (max-width: 1080px) {
