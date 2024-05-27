@@ -1,0 +1,422 @@
+body {
+    margin: 0;
+    font-family: Yu Gothic;
+    color: #2D3C7D;
+    font-weight: bold;
+    background-color: #D0D4E6;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+    "menu header header"
+    "menu hero hero"
+    "menu footer footer";
+}
+
+.menu {
+    grid-area: menu;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-right: 20rem;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero {
+    grid-area: hero;
+    padding-top: 1.8rem;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.tittle {
+    line-height: 1rem;
+    font-size: large;
+    padding-top: 1rem;
+}
+
+.tittle h2 {
+    font-size: small;
+}
+
+.button-adc {
+    margin-top: 1.5rem;
+    margin-right: 10rem;
+}
+
+.button-adc button {
+    border: none;
+    font-family: Yu Gothic;
+    display: inline-block;
+    padding: 0.4rem;
+    background-color: #3F57B9;
+    font-size: medium;
+    font-weight: bolder;
+    text-decoration: none; 
+    border-radius: 10rem;
+    cursor: pointer;
+    width: 14rem;
+}
+
+.button-adc a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-select button {
+    border: none;
+    font-family: Yu Gothic;
+    display: inline-block;
+    background-color: #3F57B9;
+    font-weight: bolder;
+    text-decoration: none; 
+    border-radius: 5rem;
+    cursor: pointer;
+    height: 1.6rem;
+    width: 5rem;
+}
+
+.btn-select a {
+    text-decoration: none;
+    color: white;
+    font-size: x-small;
+}
+
+.filtro {
+    display: flex;
+    gap: 1rem;
+}
+
+.todas-btn button {
+    border: none;
+    font-family: Yu Gothic;
+    display: inline-block;
+    background-color: #94A0D3;
+    font-size: small;
+    padding: 0.2rem;
+    font-weight: bolder;
+    text-decoration: none; 
+    border-radius: 5rem;
+    width: 5rem;
+    cursor: pointer;
+}
+
+.todas-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.difi-btn button {
+    border: none;
+    font-family: Yu Gothic;
+    display: inline-block;
+    background-color: #94A0D3;
+    font-size: small;
+    padding: 0.2rem;
+    font-weight: bolder;
+    text-decoration: none; 
+    border-radius: 5rem;
+    width: 8rem;
+    cursor: pointer;
+}
+
+.difi-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.img-btn button {
+    border: none;
+    font-family: Yu Gothic;
+    display: inline-block;
+    background-color: #94A0D3;
+    font-size: small;
+    padding: 0.2rem;
+    font-weight: bolder;
+    text-decoration: none; 
+    border-radius: 5rem;
+    width: 9rem;
+    cursor: pointer;
+}
+
+.img-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.scrollbar-container {
+    position: relative;
+    padding-top: 1rem;
+}
+
+.scrollbar {
+    padding-top: 0.3rem;
+    width: 46rem;
+    height: 0.4rem;
+    background-color: #94A0D3;
+    border-radius: 1rem;
+}
+
+.scrollbar-thumb {
+    margin-left: 1rem;
+    width: 70%;
+    height: 13%;
+    background-color: #ffff;
+    cursor: pointer;
+}
+
+.carrossel-container {
+    padding-bottom: 2rem;
+    margin-top: 1.5rem;
+    width: 92%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.carrossel-item {
+    border-radius: 0.7rem;
+    width: 21rem;
+    height: 12rem;
+    font-size: xx-large;
+    font-weight: bold;
+    background-color: white;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.dificul {
+    font-size: large;
+    margin-top: -1rem;
+}
+
+.btn-select {
+    float: right;
+    margin-right: 1.2rem;
+    margin-top: -6rem;
+}
+
+.btn-select button {
+    width: 5rem;
+    height: 1.4rem;
+}
+
+.btn-select button:active {
+    background-color: #31C456;
+}
+
+.btn-item {
+    margin-top: 2.7rem;
+}
+
+.btn-item button {
+    font-family: Yu Gothic;
+    font-size: x-small;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    background-color: transparent;
+    border-width: 0.2rem;
+    border-color: #2D3C7D;
+    border-radius: 8rem;
+    border-style: solid;
+}
+
+.btn-item a {
+    text-decoration: none;
+    color: #162874;
+    font-weight: bold;
+}
+
+.carrossel-item p {
+    font-size: x-small;
+    color: #707070;
+    margin-left: 1rem;
+    margin-top: -1.5rem;
+}
+
+.carrossel-item img {
+    float: right;
+    margin-top: -4.1rem;
+    padding-right: 1.2rem;
+}
+
+.cont-img {
+    margin-left: 15rem;
+    margin-top: -6.5rem;
+}
+
+.cont-img button {
+    background-color: transparent;
+    border: none;
+}
+
+.cont-img a {
+    color: #5A6EC1;
+    text-decoration: none;
+    font-size: x-small;
+}
+
+#item1{
+    border-bottom: 1.6rem solid #E74C3C;
+  }
+#item1 h1{
+    color: #E74C3C;
+}
+#item2{
+    border-bottom: 1.6rem solid #31C456;
+}
+#item2 h1{
+    color: #31C456;
+}
+#item3{
+    border-bottom: 1.6rem solid #FBCB23;
+}
+#item3 h1{
+    color: #FBCB23;
+}
+#item4{
+    border-bottom: 1.6rem solid #31C456;
+}
+#item4 h1{
+    color: #31C456;
+}
+#item5{
+    border-bottom: 1.6rem solid #FBCB23;
+}
+#item5 h1{
+    color: #FBCB23;
+}
+#item6{
+    border-bottom: 1.6rem solid #E74C3C;
+}
+#item6 h1{
+    color: #E74C3C;
+}
+
+.carrossel {
+    display: inline-block;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .scrollbar-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .carrossel {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .scrollbar-container {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .carrossel {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.plant {
+    position: absolute;
+    margin-top: -9rem;
+    margin-left: 42rem;
+    z-index: -1;
+}
+
+.plant img {
+    width: 23rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.btn-canceSlc {
+    margin-left: 1rem;
+    margin-top: -1rem;
+}
+
+.btn-cance {
+    padding-left: 26rem;
+    margin-top: -1rem;
+}
+
+.btn-prova {
+    margin-left: 1rem;
+    margin-top: -1.3rem;
+}
+
+.btn-canceSlc button {
+    font-family: Yu Gothic;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0.2rem;
+    border-width: 0.3rem;
+    border-color: #2D3C7D;
+    border-radius: 8rem;
+    width: 11rem;
+    border-style: solid;
+}
+
+.btn-canceSlc a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2D3C7D;
+}
+
+.btn-cance button {
+    font-family: Yu Gothic;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0.2rem;
+    border-width: 0.2rem;
+    border-color: #FF1800;
+    border-radius: 8rem;
+    width: 7rem;
+    border-style: solid;
+}
+
+.btn-cance a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #FF1800;
+}
+
+.btn-prova button {
+    font-family: Yu Gothic;
+    display: inline-block;
+    background-color: #31C456;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem;
+    border-radius: 10rem;
+    width: 9rem;
+}
+
+.btn-prova a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: medium;
+}
