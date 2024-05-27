@@ -1,5 +1,6 @@
 import Modal from '@/components/Modal';
 import { useDisclosure } from '@chakra-ui/react';
+import AddNewQuestion from '@/components/ModalContents/AddNewQuestion';
 
 interface HeaderTitleProps {
   title: string;
@@ -33,11 +34,10 @@ export default function HeaderTitle({
       <Modal
         isOpen={isOpen}
         onClose={onClose}
-        title="Teste"
-        button1Title="Fechar"
-        button1Action={onClose}
+        title="Adicionar nova questão"
+        description="Aqui você pode adicionar uma nova questão, compartilha-la com outros professores (opcional) e definir qual o seu grau de dificuldade!"
       >
-        <p>Fala tututu</p>
+        <AddNewQuestion />
       </Modal>
     </div>
   );

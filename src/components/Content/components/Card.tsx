@@ -22,8 +22,6 @@ export default function Card(props: CardContent) {
         </button>
       </div>
 
-      <p className="text-sm">Estatisticas da Turma</p>
-
       <div className="absolute bottom-0 right-0">
         <Image src={DetailImage} alt="Detalhes" width={200} height={100} />
       </div>

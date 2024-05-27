@@ -8,9 +8,10 @@ import { Mode } from '@/constants/sidebuttons';
 
 interface QuestionsDBProps {
   setMode: (mode: Mode) => void;
+  mode: Mode;
 }
 
-export default function QuestionsDB({ setMode }: QuestionsDBProps) {
+export default function QuestionsDB({ setMode, mode }: QuestionsDBProps) {
   const [selecteds, setSelecteds] = useState<number[]>([]);
   const [filteredExamContent, setFilteredExamContent] = useState<ExamContent[]>(examContent);
   const [selectedLevel, setSelectedLevel] = useState<string>('all');
@@ -67,7 +68,12 @@ export default function QuestionsDB({ setMode }: QuestionsDBProps) {
         </select>
       </div>
 
-      <Cards examContent={filteredExamContent} setSelecteds={setSelecteds} selecteds={selecteds} />
+      <Cards
+        examContent={filteredExamContent}
+        setSelecteds={setSelecteds}
+        selecteds={selecteds}
+        mode={mode}
+      />
     </div>
   );
 }

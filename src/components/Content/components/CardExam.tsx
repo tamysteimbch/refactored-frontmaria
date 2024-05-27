@@ -12,6 +12,7 @@ function truncateText(text: string, maxLength: number): string {
 interface CardExamProps extends ExamContent {
   setSelecteds?: (selecteds: number[]) => void;
   selecteds?: number[];
+  hasSelected?: boolean;
 }
 
 export default function CardExam(props: CardExamProps) {
@@ -39,19 +40,17 @@ export default function CardExam(props: CardExamProps) {
           </div>
 
           <div className="flex flex-col gap-2 text-center">
-            <button
-              type="button"
-              className={`${
-                isSelected ? 'bg-red-600 hover:bg-red-800' : 'bg-secondary hover:bg-primary'
-              } text-white p-2 border-[3px] rounded-lg border-white `}
-              onClick={handleSelectClick}
-            >
-              {isSelected ? 'Remover' : 'Selecionar'}
-            </button>
-
-            <button className="text-[12px] text-primary hover:text-secondary">
-              Estatisticas da questão
-            </button>
+            {!props.hasSelected && (
+              <button
+                type="button"
+                className={`${
+                  isSelected ? 'bg-red-600 hover:bg-red-800' : 'bg-secondary hover:bg-primary'
+                } text-white p-2 border-[3px] rounded-lg border-white `}
+                onClick={handleSelectClick}
+              >
+                {isSelected ? 'Remover' : 'Selecionar'}
+              </button>
+            )}
 
             {props.hasImage && <p className="text-[12px]">Contém imagem</p>}
           </div>

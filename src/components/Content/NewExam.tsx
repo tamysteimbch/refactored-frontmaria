@@ -5,6 +5,9 @@ import Cards from './components/Cards';
 import examContent, { ExamContent } from '@/constants/examContent';
 import { useState, useEffect } from 'react';
 import { Mode } from '@/constants/sidebuttons';
+import Modal from '../Modal';
+import AddQuestion from '../ModalContents/AddNewExam';
+import { useDisclosure } from '@chakra-ui/react';
 
 interface ExamContentProps {
   setMode: (mode: Mode) => void;
@@ -15,6 +18,7 @@ export default function NewExam({ setMode }: ExamContentProps) {
   const [filteredExamContent, setFilteredExamContent] = useState<ExamContent[]>(examContent);
   const [selectedLevel, setSelectedLevel] = useState<string>('all');
   const [selectedImageFilter, setSelectedImageFilter] = useState<string>('all');
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   useEffect(() => {
     filterExamContent();
@@ -94,11 +98,21 @@ export default function NewExam({ setMode }: ExamContentProps) {
                 : 'bg-[#31C456] border-[#31C456] text-white hover:bg-[#2e8143] hover:border-[#2e8143]'
             } rounded-lg p-2`}
             disabled={selecteds.length === 0}
+            onClick={onOpen}
           >
             Gerar prova
           </button>
         </div>
       </div>
+
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        title="Adicionar nova prova"
+        description="Aqui você pode gerar a sua prova, o gabarito (opcional) e salvá-la em sua conta!"
+      >
+        <AddQuestion />
+      </Modal>
     </div>
   );
 }
