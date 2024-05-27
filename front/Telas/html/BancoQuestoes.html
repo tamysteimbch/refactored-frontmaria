@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banco de Questões</title>
     <link rel="stylesheet" href="/front/Telas/styles/styleBanco.css">
-    <link rel="stylesheet" href="/front/Telas/js/Barr.js">
+    <link rel="stylesheet" href="/front/Telas/styles/styleModalQ.css">
 </head>
 <body>
     <div class="container">
@@ -178,103 +178,7 @@
         </div>
     </div>
 
-    <dialog>
-        
-        <div class="modal-container">
-            <div class="modal-header">
-                <img src="/front/Telas/components/imgModalProvas.svg" alt="Luminária" style="width : 6rem">
-                <div class="close-btn">
-                    <button><a href="#">Fechar</a></button>
-                </div>
-                <div class="mtittle">
-                    <h1>Adicionar nova questão</h1>
-                    <p>Aqui você pode adicionar uma nova questão, compartilha-la com<br>
-                        outros professores (opcional) e definir qual o seu grau de<br> dificuldade!</p>
-                </div>
-            </div>
-            
-            <div class="modal-hero">
-                <div class="enun">
-                    <p>Enunciado</p>
-                    <textarea name="enun-inp" id="enun">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever...
-                    </textarea>
-                </div>
-
-                <div class="ques-inp">
-                    <input type="checkbox" id="ques-inp" name="comp">
-                    <label for="comp">Questão múltipla escolha</label>
-                </div>
-
-                <div class="class">
-                    <p>Ano</p>
-                    <select id="class-op" name="opcao">
-                        <option value="valor1">6ºA</option>
-                        <option value="valor2">6ºB</option>
-                        <option value="valor3">7ºA</option>
-                    </select>
-                </div>
-                <div class="mat">
-                    <p>Matéria</p>
-                    <select id="mat-op" name="opcao">
-                        <option value="valor1">História</option>
-                        <option value="valor2">Matemática</option>
-                        <option value="valor3">Geografia</option>
-                    </select>
-                </div>
-                <div class="cont">
-                    <p>Conteúdo</p>
-                    <input type="text" name="cont" id="cont-inp" value="Ex: Egito">
-                </div>
-        
-                <div class="dif">
-                    <p>Nível de dificuldade</p>
-                    <button id="easy-btn"><a href="#">Fácil</a></button>
-                    <button id="med-btn"><a href="#">Médio</a></button>
-                    <button id="hard-btn"><a href="#">Difícil</a></button>
-                </div>
-                
-                <div class="img-inp">
-                    <p>Imagem</p>
-                    <input type="file" id="img-inp" name="img" accept="image/*" hidden>
-                    <label for="img-inp" class="custom-file-label">Selecionar imagem 
-                        <img src="/front/Telas/components/imgSlcImg.svg" alt="imagem" style="width : 1.2rem">
-                    </label>
-                </div>
-
-                <div class="comp-inp">
-                    <input type="checkbox" id="comp-inp" name="comp">
-                    <label for="comp">Compartilhar com outros professores</label>
-                </div>
-            </div>
-            
-            <div class="modal-footer">
-                <div class="clean-btn">
-                    <button><a href="#">Limpar</a></button>
-                </div>
-        
-                <div class="make-btn">
-                    <button><a href="#">Criar questão</a></button>
-                </div>
-            </div>
-        </div>
-        </dialog>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-            const button = document.querySelector(".button-adc");
-            const modal = document.querySelector("dialog");
-            const btnClose = document.querySelector(".close-btn button");
-    
-            button.onclick = function (event) {
-            event.preventDefault();
-            modal.showModal();
-            }
-    
-            btnClose.onclick = function (event) {
-            event.preventDefault();
-            modal.close();
-            }});
-        </script>
-
+    <script src="/front/Telas/js/Barr.js"></script>
+    <script src="/front/Telas/js/ModalAdcQ.js"></script>
 </body>
 </html>
