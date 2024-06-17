@@ -1,16 +1,40 @@
 import GridItem from './components/GridItem';
 import { Input, Select, Checkbox, Textarea } from '@chakra-ui/react';
+import { ExamContent } from '@/constants/examContent';
+import { useState } from 'react';
+import { toast } from 'react-toastify';
+interface AddNewQuestionProps {
+  examContent?: ExamContent;
+  isEdit?: boolean;
+  onCloseEdit?: () => void;
+}
 
-export default function AddNewQuestion() {
+export default function AddNewQuestion({ examContent, isEdit, onCloseEdit }: AddNewQuestionProps) {
+  const initialData: ExamContent = {
+    id: 0,
+    level: '',
+    description: '',
+    hasImage: false,
+    color: '',
+  };
+
+  const [data, setData] = useState<ExamContent>(examContent ? examContent : initialData);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setData({ ...data, [e.target.id]: e.target.value });
+  };
+
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
       <GridItem label="Enunciado" className="lg:col-span-3 md:col-span-3 col-span-3">
         <Textarea
-          id="enunciado"
+          id="description"
           placeholder="Digite o enunciado da questão"
           size="md"
           cols={20}
           rows={6}
+          onChange={handleChange}
+          value={data.description}
         />
       </GridItem>
 
@@ -78,6 +102,7 @@ export default function AddNewQuestion() {
         <button
           type="button"
           className="p-4 border-2 border-secondary w-1/4 mx-auto text-secondary font-bold rounded-2xl hover:bg-secondary hover:text-white lg:col-span-2"
+          onClick={() => setData(initialData)}
         >
           Limpar
         </button>
@@ -85,8 +110,24 @@ export default function AddNewQuestion() {
         <button
           type="button"
           className="p-4 bg-[#31C456] hover:bg-[#218339] text-white rounded-2xl w-1/3 mx-auto"
+          onClick={() => {
+            if (isEdit) {
+              if (examContent) {
+                examContent = data;
+                toast.success('Questão editada com sucesso');
+                if (examContent && examContent.id) {
+                  examContent.id = examContent.id + 1;
+                }
+              }
+              if (examContent) {
+                examContent = data;
+              }
+              onCloseEdit && onCloseEdit();
+              return;
+            }
+          }}
         >
-          Criar prova
+          {isEdit ? 'Editar questão' : 'Criar questão'}
         </button>
       </div>
     </div>

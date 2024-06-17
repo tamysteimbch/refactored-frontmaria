@@ -98,7 +98,7 @@ export default function MobileMenu({ setMode }: MobileMenuProps) {
                 <Avatar size={'sm'} src={FlaviaImgUrl} />
               </MenuButton>
               <MenuList>
-                <MenuItem>
+                <MenuItem onClick={() => setMode('profile')}>
                   <span className="text-black">Minha conta</span>
                 </MenuItem>
               </MenuList>

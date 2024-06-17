@@ -2,7 +2,7 @@ import { MdOutlineClass } from 'react-icons/md';
 import { LuNewspaper } from 'react-icons/lu';
 import { GoDatabase } from 'react-icons/go';
 
-export type Mode = 'class' | 'test' | 'question' | 'notification' | 'newExam';
+export type Mode = 'class' | 'test' | 'question' | 'notification' | 'newExam' | 'exam' | 'profile';
 
 type SideButton = {
   icon: React.ReactNode;

@@ -34,6 +34,7 @@ export default function Cards({
             selecteds={selecteds}
             {...card}
             hasSelected={mode === 'question' ? true : false}
+            isDb={mode === 'question' ? true : false}
           />
         ))}
     </div>

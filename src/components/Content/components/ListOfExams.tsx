@@ -1,7 +1,10 @@
 import { TestContent } from '@/constants/testContent';
+import { Mode } from '@/constants/sidebuttons';
 
 interface ListOfExamsProps {
   examContent: TestContent[];
+  setExamContent: (value: TestContent) => void;
+  setMode: (mode: Mode) => void;
 }
 
 function pickColour(level: 'Fácil' | 'Médio' | 'Difícil') {
@@ -17,7 +20,12 @@ function pickColour(level: 'Fácil' | 'Médio' | 'Difícil') {
   }
 }
 
-export default function ListOfExams({ examContent }: ListOfExamsProps) {
+export default function ListOfExams({ examContent, setExamContent, setMode }: ListOfExamsProps) {
+  const handleClick = (content: TestContent) => {
+    setExamContent(content);
+    setMode('exam');
+  };
+
   return (
     <div>
       <div>
@@ -30,7 +38,11 @@ export default function ListOfExams({ examContent }: ListOfExamsProps) {
         style={{ maxHeight: 'calc(100vh - 24rem)' }}
       >
         {examContent.map((content: TestContent) => (
-          <div key={content.id} className="p-4 grid grid-cols-12 cursor-pointer hover:bg-gray-400">
+          <div
+            key={content.id}
+            className="p-4 grid grid-cols-12 cursor-pointer hover:bg-gray-400"
+            onClick={() => handleClick(content)}
+          >
             <div
               className={`col-span-1 rounded-lg w-1/3`}
               style={{ backgroundColor: pickColour(content.level) }}

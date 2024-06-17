@@ -26,7 +26,7 @@ export default function Sidebar({ isNavCollapsed, setIsNavCollapsed, setMode }: 
           <ButtonsList setMode={setMode} />
         </div>
 
-        <Footer />
+        <Footer setMode={setMode} />
       </aside>
     )
   );
