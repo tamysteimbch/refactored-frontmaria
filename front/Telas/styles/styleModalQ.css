@@ -1,0 +1,295 @@
+dialog {
+    border: none;
+    padding: 0;
+    border-radius: 1rem;
+    overflow-y: hidden;
+}
+
+.modal-container-q {
+    font-weight: lighter;
+    background-color: white;
+    height: 39rem;
+    width: 38rem;
+    font-family: Yu gothic;
+    border-radius: 1rem;
+    color: #707070;
+    overflow-x: hidden;
+}
+
+.modal-header-q {
+    background-color: #D0D4E6;
+    align-items: center;
+    height: 9rem;
+    overflow: hidden;
+}
+
+.modal-header-q img {
+    margin-left: 0.5rem;
+}
+
+.tittle-q {
+    margin-top: -15rem;
+    margin-left: 3.5rem;
+    color: #162874;
+}
+
+.tittle-q h1 {
+    font-size: 1.6rem;
+    margin-left: 6rem;
+    margin-top: 2.5rem;
+}
+
+.tittle-q p {
+    font-size: 0.8rem;
+    font-weight: medium;
+    text-align: center;
+    margin-left: -4rem;
+    margin-top: -1rem;
+}
+
+.close-btn {
+    float: right;
+    padding-top: 1.5rem;
+    margin-right: 2rem;
+}
+
+.close-btn button {
+    font-family: Yu Gothic;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0.1rem;
+    border-width: 0.15rem;
+    border-color: #D44334;
+    border-radius: 8rem;
+    width: 4rem;
+    border-style: solid;
+}
+
+.close-btn a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #E74C3C;
+}
+
+.modal-hero-q {
+    margin-left: 2.4rem;
+    margin-top: -0.5rem;
+}
+
+.enun-q p {
+    font-size: larger;
+    margin-bottom: -0.01rem;
+}
+
+textarea#enun {
+    width: 33rem;
+    height: 5rem; 
+    border: 1px solid #162874;
+    border-radius: 1rem;
+    font-size: small;
+    resize: none; 
+    color: #707070;
+}
+
+.ques-inp-q {
+    margin-top: 0.5rem;
+}
+
+.class-q {
+    margin-left: 14rem;
+}
+
+.class-q p {
+    margin-bottom: -0.1rem;
+    font-size: large;
+}
+
+.class-q select {
+    width: 4.5rem;
+    padding: 0.35rem;
+    border-radius: 0.4rem;
+    border-color: #162874;
+    border-style: solid;
+    border-width: 0.1rem;
+    color: #707070;
+}
+
+.mat-q {
+    margin-left: 21rem;
+    margin-top: -4.7rem;
+    font-size: large;
+}
+
+.mat-q p {
+    margin-bottom: -0.1rem;
+}
+
+.mat-q select {
+    width: 12rem;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    border-color: #162874;
+    border-style: solid;
+    border-width: 0.1rem;
+    color: #707070;
+}
+
+.cont-q {
+    padding-top: 0.5rem;
+    margin-top: -5.4rem;
+}
+
+.cont-q p {
+    margin-bottom: -0.01rem;
+    font-size: large;
+}
+
+.cont-q input {
+    padding: 0.4rem;
+    width: 10.8rem;
+    border-radius: 0.4rem;
+    border-color: #162874;
+    border-style: solid;
+    border-width: 0.1rem;
+    color: #707070;
+}
+
+.dif-q p {
+    font-size: large;
+    margin-bottom: -0.1rem;
+}
+
+.dif-q button:not(:last-child) {
+    margin-right: -3px; 
+}
+
+#easyq-btn{
+    background-color: #31C456;
+    padding: 0.8rem;
+    border: none;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    width: 3.5rem;
+    margin-top: 0.5rem;
+}
+
+#easyq-btn a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    margin-left: 0.1rem;
+}
+
+#medq-btn{
+    background-color: #FBCB23;
+    padding: 0.8rem;
+    border: none;
+    width: 3.5rem;
+}
+
+#medq-btn a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    margin-left: -0.15rem;
+}
+
+#hardq-btn{
+    background-color: #E74C3C;
+    padding: 0.8rem;
+    border: none;
+    border-top-right-radius:0.5rem ;
+    border-bottom-right-radius: 0.5rem;
+    width: 3.5rem;
+}
+
+#hardq-btn a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    margin-left: -0.15rem;
+}
+
+.comp-inp-q {
+    margin-top: 2rem;
+}
+
+.comp-inp-q, .ques-inp-q {
+    font-size: small;
+}
+
+.img-inp {
+    font-size: large;
+    margin-left: 21rem;
+    margin-top: -5.7rem;
+}
+
+.img-inp p{
+    margin-bottom: -0.2rem;
+}
+
+.img-inp input {
+    color: #162874;
+}
+
+.img-inp label {
+    color: #162874;
+    font-size: small;
+}
+
+.img-inp img {
+    margin-bottom: -0.3rem;
+    margin-left: 0.4rem;
+}
+
+.cleanq-btn {
+    margin-left: 3rem;
+}
+
+.cleanq-btn button{
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0.5rem;
+    border-width: 0.15rem;
+    border-color: #2D3C7D;
+    border-radius: 8rem;
+    border-style: solid;
+    width: 5rem;
+}
+
+.cleanq-btn a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2D3C7D;
+}
+
+.makeq-btn {
+    margin-right: 3rem;
+}
+
+.makeq-btn button {
+    font-family: Yu Gothic;
+    display: inline-block;
+    background-color: #31C456;
+    border: none;
+    cursor: pointer;
+    padding: 0.23rem;
+    border-radius: 10rem;
+    width: 11rem;
+}
+
+.makeq-btn a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.modal-footer-q {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}

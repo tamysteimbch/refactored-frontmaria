@@ -4,6 +4,8 @@ body {
   color: #2D3C7D;
   font-weight: bold;
   background-color: #D0D4E6;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .container{
@@ -14,14 +16,12 @@ body {
   "menu hero hero";   
 }
 
-.main {
-  padding-left: 2rem;
-}
-
-.menu{
+.menu {
   grid-area: menu;
-  width: 17rem;
-  background-color: #2D3C7D;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-right: 20rem;
 }
 
 .header {
@@ -37,15 +37,15 @@ body {
 
 .header h2 {
   font-size: large;
-  margin-top: -1.3rem;
+  margin-top: -2rem;
 }
 
-.button {
+.button-adc {
   padding: 3rem;
   margin-right: 15rem;
 }
 
-.button .btn-adc {
+.button-adc .btn-link {
   font-family: Yu Gothic;
   display: inline-block;
   padding: 0.5rem;
@@ -58,7 +58,7 @@ body {
   cursor: pointer;
 }
 
-.button button {
+.button-adc button {
   background: transparent;
   border: none;
 }
@@ -90,14 +90,14 @@ body {
 }
 
 .carrossel-container {
-  padding-bottom: 2rem;
   margin-top: 2rem;
-  width: 90%;
+  width: 80%;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
   scrollbar-width: none; 
   -ms-overflow-style: none; 
+  height: 32rem;
 }
 
 .carrossel-item {
@@ -135,25 +135,9 @@ body {
   background-color: #6D95E6;
 }
 
-#estatisticas {
-  color: #FFFFFF;
-  display: flex;
-  margin-top: 6.7rem;
-  gap: 0.2rem;
-  font-weight: bold;
-  font-size: x-small;
-}
-
-#estatisticas img {
-  width: 2rem;
-  height: 1.5rem;
-  margin-top: -0.3rem;
-  color: #FFFFFF;
-}
-
 .carrossel-item img {
  float: right;
- margin-top: -8.7rem;
+ margin-top: -1.8rem;
 }
 
 .carrossel-item p {

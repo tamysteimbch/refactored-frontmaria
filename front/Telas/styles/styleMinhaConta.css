@@ -3,6 +3,8 @@ body {
     font-family: Yu Gothic;
     color: #2D3C7D;
     font-weight: bold;
+    background-color: #D0D4E6;
+    overflow-x: hidden;
 }
 
 .container{
@@ -13,9 +15,12 @@ body {
     "menu main-footer main-footer";   
 }
 
-.menu{
+.menu {
     grid-area: menu;
-    width: 15rem;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-right: 18rem;
 }
 
 .main-header{
@@ -30,10 +35,6 @@ body {
     grid-area: main-footer;
 }
 
-.main{
-    background-color: #D0D4E6;
-}
-
 .main-header{
     display: flex;
     flex-direction:row;
@@ -44,13 +45,15 @@ body {
 
 .main-header h1 {
     font-style: bold;
-    font-size: xxx-large;
-    margin-bottom: -0.5rem; 
+    font-size: xx-large;
+    margin-bottom: -1rem; 
+    padding-top: 1rem;
 }
 
 .main-header h2 {
-    font-size: large;
-    padding-left: 0.4rem;
+    font-size: medium;
+    padding-left: 0.1rem;
+    font-weight: light;
 }
 
 .btn-link {
@@ -66,15 +69,15 @@ body {
     cursor: pointer;
 }
 
-.button {
+.button-adc {
     padding-top: 2.7rem;
-    padding-right: 14rem;
+    margin-right: 5rem;
 }
 
 .main-hero {
     display: flex;
     align-items: center; 
-    height: 28rem;
+    height: 25rem;
     margin-top: -2rem;
 }
 
@@ -101,13 +104,16 @@ body {
 }
 
 .info {
-    margin-left: -3rem;    
+    font-size: small;
+    margin-left: -3rem;  
+    margin-top: -3rem;  
 }
 
 .info-grid {
     display: grid;
     grid-template-columns: max-content 1fr;
     gap: 0.25rem; 
+    font-size: smaller;
 }
 
 button {
@@ -137,6 +143,7 @@ textarea {
     color: #5A6EC1;;
     font-weight: bold;
     margin-top: -0.5rem;
+    margin-left: 1rem;
 }
 
 .name h1,
@@ -149,9 +156,11 @@ textarea {
     margin-top: -1rem;
 }
 
-.plant{
-    margin-left: -10rem;
-    padding-top: 18rem;
+.plant {
+    position: absolute;
+    margin-left: 45rem;
+    margin-bottom: -13rem;
+    z-index: -1;
 }
 
 .line {
@@ -159,10 +168,8 @@ textarea {
     background-color: black;
     width: 50%;
     opacity: 20%;
-    margin-top: -1rem;
-    margin: 0;
-    font-family: Yu Gothic;
-    color: #2D3C7D;
+    margin-top: -5rem;
+    margin-bottom: 1rem;
     font-style: bold;
     margin-left: 18rem;
 }
@@ -176,15 +183,16 @@ textarea {
     display: grid;
     grid-template-columns: 1fr 1fr; 
     margin-top: -3rem;
-    font-size: small;
     padding-bottom: 4rem;
 }
 
 .school-info {
     padding-top: 2rem;
+    font-size: x-large;
 }
 
 .inst, .cellfone, .adress {
+    font-size: smaller;
     padding-left: 3rem;
 }
 
@@ -195,7 +203,7 @@ textarea {
 
 .cellfone{
     grid-column: 2; 
-    margin-left: -10rem;
+    margin-left: -1rem;
     margin-top: -1rem;
 }
 

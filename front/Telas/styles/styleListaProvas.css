@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    font-family: Yu Gothic;
+    color: #2D3C7D;
+    font-weight: bold;
+    background-color: #D0D4E6;
+    overflow-x: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+    "menu header header"
+    "menu hero hero"
+    "menu hero hero";
+}
+
+.menu {
+    grid-area: menu;
+    overflow: none;
+    width: auto;
+    height: 100%;
+    margin: 0;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+}
+
+.button-adc {
+   margin-left: 39rem;
+   margin-top: 2rem;
+}
+
+.button-adc button {
+    border: none;
+    font-family: Yu Gothic;
+    display: inline-block;
+    padding: 0.4rem;
+    background-color: #3F57B9;
+    font-size: medium;
+    font-weight: bolder;
+    text-decoration: none; 
+    border-radius: 10rem;
+    cursor: pointer;
+    width: 14rem;
+}
+
+.button-adc a {
+    text-decoration: none;
+    color: white;
+}   
+
+.hero {
+    grid-area: hero;
+}
+
+.tittle {
+    margin-top: -1rem;
+}
+
+.tittle h1 {
+    font-size: 2.5rem;
+    margin-left: 0.8rem;
+}
+
+.tittle h2 {
+    font-size: 1rem;
+    margin-top: -2rem;
+    margin-left: 1rem;
+}
+
+.tittle-list {
+    font-size: 1.8rem;
+    margin-top: -2rem;
+    margin-left: 1rem;
+}
+
+.line {
+    height: 2px;
+    background-color: black;
+    width: 70%;
+    opacity: 20%;
+    margin: 0;
+    color: #2D3C7D;
+    font-style: bold;
+    margin-left: 1rem;
+    margin-top: -1.7rem;
+}
+
+.list {
+    margin-top: -0.3rem;
+    overflow-y: scroll;
+    width: 45rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+    height: 36rem;
+    padding-right: 13rem;
+}
+
+.list::-webkit-scrollbar {
+    width: 12px; 
+}
+
+.list::-webkit-scrollbar-thumb {
+    background-color: #ffff; 
+    border-radius: 10px; 
+    border: 5px solid transparent;
+    background-clip: content-box; 
+}
+
+.list::-webkit-scrollbar-track {
+    height: 0.7rem;
+    background-color: #94A0D3;
+    border-radius: 1rem;
+}
+
+.prova {
+    padding:0.01rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 1.3rem;
+    margin-bottom: -1.5rem;
+}
+
+.conte {
+    margin-left: 1rem;
+}
+
+.status {
+    margin-left: auto;
+    margin-right: 3rem;
+}
+
+.data p:last-child {
+    color: #5A6EC1;
+    font-size: 1rem;
+    margin-top: -1rem;
+    margin-left: 1rem;
+}
+.turma p:last-child {
+    color: #5A6EC1;
+    font-size: 1rem;
+    margin-top: -1rem;
+    margin-left: 1rem;
+}
+.conte p:last-child {
+    color: #5A6EC1;
+    font-size: 1rem;
+    margin-top: -1rem;
+    margin-left: 1rem;
+}
+.status p:last-child {
+    color: #5A6EC1;
+    font-size: 1rem;
+    margin-top: -1rem;
+    margin-left: 1rem;
+}
+
+.dif-d {
+    background-color: #E74C3C;
+    width: 2rem;
+    height: 3.4rem;
+    margin-top: 1.6rem;
+    margin-right: -1rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.dif-m {
+    background-color: #FBCB23;
+    width: 2rem;
+    height: 3.4rem;
+    margin-top: 1.6rem;
+    margin-right: -1rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.dif-f {
+    background-color: #31C456;
+    width: 2rem;
+    height: 3.4rem;
+    margin-top: 1.6rem;
+    margin-right: -1rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.plant {
+    position: absolute;
+    margin-top: -7rem;
+    margin-left: 46rem;
+    z-index: -1;
+}
+
+.plant img {
+    width: 23rem;
+}

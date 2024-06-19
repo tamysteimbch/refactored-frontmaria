@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="172.107" height="410" viewBox="0 0 172.107 410">
+  <g id="Lamp" transform="translate(0 0)">
+    <path id="Body" d="M144,36.236l-18.568-18.58a8,8,0,0,0-11.314,0l0,0L64.684,67.113A16,16,0,0,0,60,78.424V406" transform="translate(-31 -2)" fill="none" stroke="#cbcbcb" stroke-width="8" fill-rule="evenodd"/>
+    <rect id="Lamp-Base" width="59" height="7" rx="3" transform="translate(0 403)" fill="#afb9c5"/>
+    <g id="Lamp-Top" transform="translate(172.233 47.066) rotate(135)">
+      <path id="Lamp-2" data-name="Lamp" d="M33,61h0A33,33,0,0,0,66,28V0H0V28A33,33,0,0,0,33,61Z" transform="translate(0 5.562)" fill="#c5cfd6" fill-rule="evenodd"/>
+      <ellipse id="Lamp-3" data-name="Lamp" cx="33" cy="6.5" rx="33" ry="6.5" transform="translate(0.179 0)" fill="#f2f2f2"/>
+    </g>
+  </g>
+</svg>

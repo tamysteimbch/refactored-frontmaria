@@ -1,0 +1,280 @@
+dialog {
+    border: none;
+    padding: 0;
+    border-radius: 1rem;
+}
+
+.modal-container-p {
+    font-weight: lighter;
+    background-color: white;
+    height: 36rem;
+    width: 40rem;
+    font-family: Yu gothic;
+    border-radius: 1rem;
+    color: #707070;
+    overflow-x: hidden;
+}
+
+.modal-header-p {
+    background-color: #D0D4E6;
+    align-items: center;
+    height: 12rem;
+    overflow: hidden;
+}
+
+.mtittle {
+    margin-top: -18rem;
+    margin-left: 4rem;
+    color: #162874;
+}
+
+.mtittle h1 {
+    font-size: 2.4rem;
+    margin-left: 3.5rem;
+}
+
+.mtittle p {
+    font-size: 0.9rem;
+    font-weight: medium;
+    text-align: center;
+    margin-left: -4.8rem;
+    margin-top: -1rem;
+}
+
+.close-btn-p {
+    float: right;
+    padding-top: 2rem;
+    margin-right: 2rem;
+}
+
+.close-btn-p button {
+    font-family: Yu Gothic;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0.1rem;
+    border-width: 0.15rem;
+    border-color: #D44334;
+    border-radius: 8rem;
+    width: 4rem;
+    border-style: solid;
+}
+
+.close-btn-p a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #E74C3C;
+    padding-left: 0.1rem;
+}
+
+.modal-hero-p {
+    margin-left: 3rem;
+}
+
+.date-p input {
+    margin-bottom: -2rem;
+    padding: 0.4rem;
+    width: 9rem;
+    border-radius: 0.4rem;
+    border-color: #162874;
+    border-style: solid;
+    border-width: 0.1rem;
+    color: #707070;
+}
+
+.date-p p {
+    margin-bottom: -0.1rem;
+    font-size: large;
+}
+
+.class-p {
+    margin-left: 14rem;
+    margin-top: -4.5rem;
+}
+
+.class-p p {
+    margin-bottom: -0.1rem;
+    font-size: large;
+}
+
+.class-p select {
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    border-color: #162874;
+    border-style: solid;
+    border-width: 0.1rem;
+    color: #707070;
+}
+
+.mat-p {
+    margin-left: 21rem;
+    margin-top: -4.7rem;
+    font-size: large;
+}
+
+.mat-p p {
+    margin-bottom: -0.1rem;
+}
+
+.mat-p select {
+    width: 12rem;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    border-color: #162874;
+    border-style: solid;
+    border-width: 0.1rem;
+    color: #707070;
+}
+
+.cont-p {
+    padding-top: 0.5rem;
+    margin-top: 0.1rem;
+}
+
+.cont-p p {
+    margin-bottom: -0.1rem;
+    font-size: large;
+}
+
+.cont-p input {
+    padding: 0.4rem;
+    width: 10.8rem;
+    border-radius: 0.4rem;
+    border-color: #162874;
+    border-style: solid;
+    border-width: 0.1rem;
+    color: #707070;
+}
+
+.cabe-p {
+    margin-top: 2rem;
+}
+
+.cabe-p p {
+    margin-bottom: -0.1rem;
+    font-size: large;
+}
+
+.cabe-p select {
+    padding: 0.4rem;
+    width: 11rem;
+    border-radius: 0.4rem;
+    border-color: #162874;
+    border-style: solid;
+    border-width: 0.1rem;
+    color: #707070;
+}
+
+.dif-p {
+    margin-left: 21rem;
+    margin-top: -11rem;
+}
+
+.dif-p p {
+    font-size: large;
+    margin-bottom: -0.1rem;
+}
+
+#easy-btn{
+    background-color: #31C456;
+    padding: 1rem;
+    border: none;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+#easy-btn a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+#med-btn{
+    background-color: #FBCB23;
+    padding: 1rem;
+    border: none;
+}
+
+#med-btn a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+#hard-btn{
+    background-color: #E74C3C;
+    padding: 1rem;
+    border: none;
+    border-top-right-radius:0.5rem ;
+    border-bottom-right-radius: 0.5rem;
+}
+
+#hard-btn a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.gaba-inp-p {
+    margin-left: 20rem;
+    margin-top: 2rem;
+}
+
+.comp-inp-p {
+    padding-left: 20rem;
+    margin-top: 0.5rem;
+}
+
+.comp-inp-p, .gaba-inp-p {
+    font-size: small;
+}
+
+.clean-btn-p {
+    margin-left: 3rem;
+}
+
+.clean-btn-p button{
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0.5rem;
+    border-width: 0.15rem;
+    border-color: #2D3C7D;
+    border-radius: 8rem;
+    border-style: solid;
+    width: 5rem;
+}
+
+.clean-btn-p a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2D3C7D;
+}
+
+.make-btn-p {
+    margin-right: 4rem;
+}
+
+.make-btn-p button {
+    font-family: Yu Gothic;
+    display: inline-block;
+    background-color: #31C456;
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem;
+    border-radius: 10rem;
+    width: 9rem;
+}
+
+.make-btn-p a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+}
