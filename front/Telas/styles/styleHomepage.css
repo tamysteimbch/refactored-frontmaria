@@ -5,6 +5,7 @@ body {
   font-weight: bold;
   background-color: #D0D4E6;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .container{
@@ -39,12 +40,12 @@ body {
   margin-top: -2rem;
 }
 
-.button {
+.button-adc {
   padding: 3rem;
   margin-right: 15rem;
 }
 
-.button .btn-adc {
+.button-adc .btn-link {
   font-family: Yu Gothic;
   display: inline-block;
   padding: 0.5rem;
@@ -57,7 +58,7 @@ body {
   cursor: pointer;
 }
 
-.button button {
+.button-adc button {
   background: transparent;
   border: none;
 }
@@ -89,14 +90,14 @@ body {
 }
 
 .carrossel-container {
-  padding-bottom: 2rem;
   margin-top: 2rem;
-  width: 90%;
+  width: 80%;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
   scrollbar-width: none; 
   -ms-overflow-style: none; 
+  height: 32rem;
 }
 
 .carrossel-item {

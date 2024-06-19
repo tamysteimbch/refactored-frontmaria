@@ -1,0 +1,172 @@
+dialog {
+    border: none;
+    padding: 0;
+    border-radius: 1rem;
+    overflow-y: hidden;
+}
+
+.modal-container-e {
+    font-weight: lighter;
+    background-color: white;
+    height: 20rem;
+    width: 38rem;
+    font-family: Yu gothic;
+    border-radius: 1rem;
+    color: #707070;
+    overflow-x: hidden;
+}
+
+.modal-header-e {
+    background-color: #D0D4E6;
+    align-items: center;
+    height: 9rem;
+    overflow: hidden;
+}
+
+.modal-header-e img {
+    margin-left: 0.5rem;
+}
+
+.tittle-e {
+    margin-top: -15rem;
+    margin-left: 5rem;
+    color: #162874;
+}
+
+.tittle-e h1 {
+    font-size: 1.6rem;
+    margin-left: 8rem;
+    margin-top: 2.5rem;
+}
+
+.tittle-e p {
+    font-size: 0.8rem;
+    font-weight: medium;
+    text-align: center;
+    margin-left: -4rem;
+    margin-top: -1rem;
+}
+
+.close-btn {
+    float: right;
+    padding-top: 1.5rem;
+    margin-right: 2rem;
+}
+
+.close-btn button {
+    font-family: Yu Gothic;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0.1rem;
+    border-width: 0.15rem;
+    border-color: #D44334;
+    border-radius: 8rem;
+    width: 4rem;
+    border-style: solid;
+}
+
+.close-btn a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #E74C3C;
+}
+
+.modal-hero-e {
+    margin-left: 2.4rem;
+    
+}
+
+.cont-e {
+    padding-top: 0.5rem;
+}
+
+.cont-e p {
+    margin-bottom: -0.01rem;
+    font-size: large;
+}
+
+.cont-e input {
+    padding: 0.4rem;
+    width: 10.8rem;
+    border-radius: 0.4rem;
+    border-color: #162874;
+    border-style: solid;
+    border-width: 0.1rem;
+    color: #707070;
+}
+
+.img-inp {
+    font-size: large;
+    margin-left: 21rem;
+    margin-top: -5.7rem;
+}
+
+.img-inp p{
+    margin-bottom: -0.2rem;
+}
+
+.img-inp input {
+    color: #162874;
+}
+
+.img-inp label {
+    color: #162874;
+    font-size: small;
+}
+
+.img-inp img {
+    margin-bottom: -0.3rem;
+    margin-left: 0.4rem;
+}
+
+.remove-btn {
+    margin-left: 3rem;
+}
+
+.remove-btn button{
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0.5rem;
+    border-width: 0.15rem;
+    border-color: #2D3C7D;
+    border-radius: 8rem;
+    border-style: solid;
+    width: 5rem;
+}
+
+.remove-btn a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2D3C7D;
+}
+
+.atz-btn {
+    margin-right: 3rem;
+}
+
+.atz-btn button {
+    font-family: Yu Gothic;
+    display: inline-block;
+    background-color: #31C456;
+    border: none;
+    cursor: pointer;
+    padding: 0.23rem;
+    border-radius: 10rem;
+    width: 11rem;
+}
+
+.atz-btn a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.modal-footer-e {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}

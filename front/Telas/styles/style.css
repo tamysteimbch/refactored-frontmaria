@@ -1,5 +1,5 @@
 body {
-    margin: 0 auto;
+    margin: 0 ;
     width: 100%;
     height: 100%;
     font-family: Segoe UI;
@@ -17,18 +17,19 @@ body {
 
 .image {
     grid-area: image;
+    margin: none;
 }
 
 img {
     width: 100%;
     height: auto;
+    margin: none;
 }
 
 
 .main {
     width: 100%;
     height: auto;
-    padding: 0.7rem;
 }
 
 .form {
@@ -47,22 +48,24 @@ img {
 .tittle {
     padding-top: 2rem;
     line-height: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: Yu Gothic;
 }
 
-.sub-tittle {
-    line-height: 1px;
-    font-size: 0.6rem;
-    padding-left: 1rem;
+.sub-tittle h2{
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-top: -0.4rem;
 }
 
 .input-group {
     padding-top: 5.5rem;
 }
 
-.t3 {
-    font-size: 0.7rem;
+.t3 h3{
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-top: -0.4rem;
     padding-left: 2.1rem;
 }
 
@@ -80,6 +83,7 @@ img {
     padding: 8px;
     border-radius: 5px;
     border-color: white;
+    border: 1px solid #D0D4E6;
 }
 
 .input-box input:focus-visible{
@@ -122,7 +126,7 @@ img {
 
 .passw {
     padding-top: 10px;
-    padding-left: 3.5rem;
+    padding-left: 4.3rem;
     padding-bottom: 6rem;
 }
 

@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styleMinhaConta.css">
+    <link rel="stylesheet" href="/front/Telas/styles/styleMinhaConta.css">
+    <link rel="stylesheet" href="/front/Telas/styles/styleModalQ.css">
+
     <title>Minha Conta</title>
 </head>
 <body>
     <div class="container">
 
-        <div class="menu"></div>
+        <div class="menu">
+            <iframe src="/front/Menu/Menu.html" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
 
         <div class="main">
             <div class="main-header">
@@ -19,14 +23,14 @@
                     <h2>Atualize as informações da sua conta</h2>
                 </div>
                
-                <div class="button">
+                <div class="button-adc">
                     <button><a href="#" class="btn-link">+ Adicionar nova questão</a></button>
                 </div>
             </div>
 
             <div class="main-hero">
                 <div class="icon">
-                    <img src="components/image.png" alt="Professora" style="width:200px">
+                    <img src="/front/Telas/components/image.png" alt="Professora" style="width:200px">
                     <button><a href="#"></a>Editar</button>
                 </div>
                 
@@ -58,14 +62,14 @@
                 </div>
                     
                 <div class="plant">
-                    <img src="components/plant.svg" alt="Planta" style="width: 500px">
+                    <img src="/front/Telas/components/plant.svg" alt="Planta" style="width: 400px">
                 </div>
             </div>
 
             <div class="line"></div>
 
             <div class="main-footer">
-                <img src="components/decoraçã.png" alt="Pessoa" style="width:250px">
+                <img src="/front/Telas/components/decoraçã.png" alt="Pessoa" style="width:250px">
 
                 <div class="school">
                     <h1 class="school-info">Informações escolares</h1>
@@ -88,6 +92,8 @@
             </div>
         </div>
     </div>
+    <script src="/front/Telas/js/Modal/ModalAdcQ.js"></script>
+
     <script>
         document.getElementById("editarNomeBtn").addEventListener("click", function() {
             document.getElementById("nomeTextarea").removeAttribute("disabled");

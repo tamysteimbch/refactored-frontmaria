@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         
         <div class="modal-hero-q">
-            <div class="enun">
+            <div class="enun-q">
                 <p>Enunciado</p>
                 <textarea name="enun-inp" id="enun">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever...
                 </textarea>
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <button><a href="#">Limpar</a></button>
             </div>
     
-            <div class="makeq-btn">
+            <div class="makeq-btn" id="makeq-btn">
                 <button><a href="#">Criar questão</a></button>
             </div>
         </div>

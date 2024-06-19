@@ -72,7 +72,7 @@ body {
 }
 
 .tittle-list {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-top: -2rem;
     margin-left: 1rem;
 }
@@ -96,7 +96,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: 5rem;
-    height: 35rem;
+    height: 36rem;
     padding-right: 13rem;
 }
 
@@ -192,7 +192,7 @@ body {
 
 .plant {
     position: absolute;
-    margin-top: -5rem;
+    margin-top: -7rem;
     margin-left: 46rem;
     z-index: -1;
 }
