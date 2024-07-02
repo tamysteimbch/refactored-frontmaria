@@ -1,14 +1,14 @@
 import Card from './Card';
 import CardExam from './CardExam';
 import { CardContent } from '@/constants/cardContent';
-import { ExamContent } from '@/constants/examContent';
 import { Mode } from '@/constants/sidebuttons';
+import { Questions } from '@/app/api/types/questions.types';
 
 interface CardsProps {
   cardContent?: CardContent[];
-  examContent?: ExamContent[];
-  setSelecteds?: (selecteds: number[]) => void;
-  selecteds?: number[];
+  examContent?: Questions[];
+  setSelecteds?: (selecteds: string[]) => void;
+  selecteds?: string[];
   mode?: Mode;
 }
 
@@ -27,9 +27,9 @@ export default function Cards({
       {cardContent && cardContent.map((card: CardContent) => <Card key={card.title} {...card} />)}
 
       {examContent &&
-        examContent.map((card: ExamContent) => (
+        examContent.map((card: Questions) => (
           <CardExam
-            key={card.id}
+            key={card._id}
             setSelecteds={setSelecteds}
             selecteds={selecteds}
             {...card}

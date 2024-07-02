@@ -6,14 +6,21 @@ import CreateExamBtn from './CreateExamBtn';
 import Footer from './Footer';
 import { TbLayoutSidebarLeftCollapseFilled } from 'react-icons/tb';
 import { Mode } from '@/constants/sidebuttons';
+import { Teacher } from '@/app/api/types/teacher.types';
 
 interface SidebarProps {
   isNavCollapsed: boolean;
   setIsNavCollapsed: (value: boolean) => void;
   setMode: (value: Mode) => void;
+  user: Teacher;
 }
 
-export default function Sidebar({ isNavCollapsed, setIsNavCollapsed, setMode }: SidebarProps) {
+export default function Sidebar({
+  isNavCollapsed,
+  setIsNavCollapsed,
+  setMode,
+  user,
+}: SidebarProps) {
   return (
     !isNavCollapsed && (
       <aside className="lg:w-[35rem] lg:flex bg-primary text-white hidden flex-col justify-between">

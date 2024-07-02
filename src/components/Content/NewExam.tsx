@@ -8,14 +8,18 @@ import { Mode } from '@/constants/sidebuttons';
 import Modal from '../Modal';
 import AddQuestion from '../ModalContents/AddNewExam';
 import { useDisclosure } from '@chakra-ui/react';
+import { Questions } from '@/app/api/types/questions.types';
+import { useAppSelector } from '@/lib/hooks';
 
 interface ExamContentProps {
   setMode: (mode: Mode) => void;
 }
 
 export default function NewExam({ setMode }: ExamContentProps) {
-  const [selecteds, setSelecteds] = useState<number[]>([]);
-  const [filteredExamContent, setFilteredExamContent] = useState<ExamContent[]>(examContent);
+  const { questions } = useAppSelector((state) => state.questions);
+
+  const [selecteds, setSelecteds] = useState<string[]>([]);
+  const [filteredExamContent, setFilteredExamContent] = useState<Questions[]>(questions);
   const [selectedLevel, setSelectedLevel] = useState<string>('all');
   const [selectedImageFilter, setSelectedImageFilter] = useState<string>('all');
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -25,7 +29,7 @@ export default function NewExam({ setMode }: ExamContentProps) {
   }, [selectedLevel, selectedImageFilter]);
 
   const filterExamContent = () => {
-    let filteredContent = examContent;
+    let filteredContent = questions;
 
     if (selectedLevel !== 'all') {
       filteredContent = filteredContent.filter((content) => content.level === selectedLevel);
