@@ -1,134 +1,157 @@
-import GridItem from './components/GridItem';
-import { Input, Select, Checkbox, Textarea } from '@chakra-ui/react';
-import { ExamContent } from '@/constants/examContent';
-import { useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
+import { Input, Textarea, Button } from '@chakra-ui/react';
 import { toast } from 'react-toastify';
+import GridItem from './components/GridItem';
+import { Questions } from '@/app/api/types/questions.types';
+import { createQuestion, getQuestions, updateQuestion } from '@/app/api/questions';
+import axios, { AxiosError } from 'axios';
+import { setQuestions } from '@/lib/features/me/questions';
+import { useAppDispatch } from '@/lib/hooks';
+
 interface AddNewQuestionProps {
-  examContent?: ExamContent;
+  examContent?: Questions;
   isEdit?: boolean;
   onCloseEdit?: () => void;
 }
 
 export default function AddNewQuestion({ examContent, isEdit, onCloseEdit }: AddNewQuestionProps) {
-  const initialData: ExamContent = {
-    id: 0,
-    level: '',
-    description: '',
+  const initialData: Questions = {
+    _id: '',
+    level: 'Fácil',
+    question: '',
     hasImage: false,
-    color: '',
+    color: '#31C456',
+    alternatives: [],
+    correctAnswer: 'A',
+    value: 0,
   };
 
-  const [data, setData] = useState<ExamContent>(examContent ? examContent : initialData);
+  const dispatch = useAppDispatch();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const [data, setData] = useState<Questions>(examContent || initialData);
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setData({ ...data, [e.target.id]: e.target.value });
   };
 
+  const handleAlternativeChange = (option: 'A' | 'B' | 'C' | 'D', text: string) => {
+    const updatedAlternatives = data.alternatives.map((alt) =>
+      alt.option === option ? { ...alt, text } : alt,
+    );
+    if (!updatedAlternatives.some((alt) => alt.option === option)) {
+      updatedAlternatives.push({ option, text });
+    }
+    setData({ ...data, alternatives: updatedAlternatives });
+  };
+
+  const handleSubmit = async () => {
+    if (isEdit && examContent) {
+      try {
+        await updateQuestion(data, data._id);
+        const questions = await getQuestions();
+        dispatch(setQuestions(questions));
+        toast.success('Questão editada com sucesso');
+      } catch (error: unknown) {
+        if (axios.isAxiosError(error)) {
+          const err = error as AxiosError<{ message: string }>;
+          toast.error(err.response?.data.message || 'Erro ao criar questão');
+        } else {
+          console.error('Unexpected error:', error);
+          toast.error('An unexpected error occurred');
+        }
+      }
+    } else {
+      try {
+        await createQuestion(data);
+        const questions = await getQuestions();
+        dispatch(setQuestions(questions));
+        toast.success('Questão criada com sucesso');
+        setData(initialData);
+      } catch (error: unknown) {
+        if (axios.isAxiosError(error)) {
+          const err = error as AxiosError<{ message: string }>;
+          toast.error(err.response?.data.message || 'Erro ao criar questão');
+        } else {
+          console.error('Unexpected error:', error);
+          toast.error('An unexpected error occurred');
+        }
+      }
+    }
+    onCloseEdit && onCloseEdit();
+  };
+
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 w-full items-center">
       <GridItem label="Enunciado" className="lg:col-span-3 md:col-span-3 col-span-3">
         <Textarea
-          id="description"
+          id="question"
           placeholder="Digite o enunciado da questão"
           size="md"
-          cols={20}
-          rows={6}
           onChange={handleChange}
-          value={data.description}
+          value={data.question}
         />
       </GridItem>
 
-      <GridItem label="">
-        <Checkbox colorScheme="blackAlpha">Questão de múltipla escolha</Checkbox>
-      </GridItem>
-
-      <GridItem label="" className="lg:col-span-2 md:col-span-2 col-span-2">
-        <Checkbox colorScheme="blackAlpha">Compartilhar com outros professores</Checkbox>
-      </GridItem>
-
-      <GridItem label="Conteúdo" className="col-span-3 md:col-span-1">
-        <Input placeholder="Ex: Egito" />
-      </GridItem>
-
-      <GridItem label="Turma" className="col-span-3 md:col-span-1">
-        <Select placeholder="Selecione a Turma">
-          <option value="option1">6o A</option>
-          <option value="option2">6o B</option>
-          <option value="option3">7o A</option>
-        </Select>
-      </GridItem>
-
-      <GridItem label="Matéria" className="col-span-3 md:col-span-1">
-        <Select placeholder="Selecione a Matéria">
-          <option value="option1">Historia</option>
-          <option value="option2">Geografia</option>
-          <option value="option3">Filosofia</option>
-        </Select>
-      </GridItem>
-
-      <GridItem label="Dificuldade" className="col-span-3 md:col-span-1">
+      <GridItem label="Dificuldade" className="col-span-3">
         <div className="flex justify-center items-center">
-          <button
-            type="button"
-            className="bg-[#31C456] text-white p-4 rounded-xl rounded-r-none hover:bg-[#218339]"
-          >
-            Facil
-          </button>
-          <button type="button" className="bg-[#FBCB23] text-white p-4 hover:bg-[#E0A21D]">
-            Medio
-          </button>
-          <button
-            type="button"
-            className="bg-[#E74C3C] text-white p-4 rounded-xl rounded-l-none hover:bg-[#C73A2B]"
-          >
-            Dificil
-          </button>
+          {['Fácil', 'Médio', 'Difícil'].map((level) => (
+            <Button
+              key={level}
+              colorScheme={data.level === level ? 'teal' : 'gray'}
+              onClick={() =>
+                setData({
+                  ...data,
+                  level: level as 'Fácil' | 'Médio' | 'Difícil',
+                  color: level === 'Fácil' ? '#31C456' : level === 'Médio' ? '#FBCB23' : '#E74C3C',
+                })
+              }
+            >
+              {level}
+            </Button>
+          ))}
         </div>
       </GridItem>
 
-      <GridItem label="Imagem" className="lg:col-span-2 md:col-span-2 col-span-3">
-        <div className="mt-5">
-          <label
-            htmlFor="image-upload"
-            className="bg-secondary text-white p-2 rounded-lg cursor-pointer"
-          >
-            Adicionar imagem
-          </label>
-          <Input type="file" accept="image/*" display="none" id="image-upload" />
+      <GridItem label="Adicionar Alternativas" className="col-span-3">
+        <div className="mt-5 grid grid-cols-2 gap-4">
+          {['A', 'B', 'C', 'D'].map((option) => (
+            <Input
+              key={option}
+              type="text"
+              placeholder={`Alternativa ${option}`}
+              value={data.alternatives.find((alt) => alt.option === option)?.text || ''}
+              onChange={(e) =>
+                handleAlternativeChange(option as 'A' | 'B' | 'C' | 'D', e.target.value)
+              }
+            />
+          ))}
         </div>
+      </GridItem>
+
+      <GridItem label="Resposta Correta" className="col-span-3 md:col-span-2">
+        <Input
+          type="text"
+          id="correctAnswer"
+          placeholder="Digite a letra da resposta correta"
+          onChange={handleChange}
+          value={data.correctAnswer}
+        />
+      </GridItem>
+
+      <GridItem label="Valor da questão" className="col-span-3 md:col-span-1">
+        <Input
+          type="number"
+          id="value"
+          placeholder="Digite o valor da questão"
+          onChange={(e) => setData({ ...data, value: parseInt(e.target.value) })}
+          value={data.value.toString()}
+        />
       </GridItem>
 
       <div className="flex items-center justify-between col-span-3 gap-4 mt-8">
-        <button
-          type="button"
-          className="p-4 border-2 border-secondary w-1/4 mx-auto text-secondary font-bold rounded-2xl hover:bg-secondary hover:text-white lg:col-span-2"
-          onClick={() => setData(initialData)}
-        >
-          Limpar
-        </button>
-
-        <button
-          type="button"
-          className="p-4 bg-[#31C456] hover:bg-[#218339] text-white rounded-2xl w-1/3 mx-auto"
-          onClick={() => {
-            if (isEdit) {
-              if (examContent) {
-                examContent = data;
-                toast.success('Questão editada com sucesso');
-                if (examContent && examContent.id) {
-                  examContent.id = examContent.id + 1;
-                }
-              }
-              if (examContent) {
-                examContent = data;
-              }
-              onCloseEdit && onCloseEdit();
-              return;
-            }
-          }}
-        >
+        <Button colorScheme="blue" onClick={handleSubmit}>
           {isEdit ? 'Editar questão' : 'Criar questão'}
-        </button>
+        </Button>
       </div>
     </div>
   );

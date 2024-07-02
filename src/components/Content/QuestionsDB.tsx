@@ -2,9 +2,10 @@
 import HeaderTitle from './components/HeaderTitle';
 import { FaPlus } from 'react-icons/fa';
 import Cards from './components/Cards';
-import examContent, { ExamContent } from '@/constants/examContent';
 import { useState, useEffect } from 'react';
 import { Mode } from '@/constants/sidebuttons';
+import { useAppSelector } from '@/lib/hooks';
+import { Questions } from '@/app/api/types/questions.types';
 
 interface QuestionsDBProps {
   setMode: (mode: Mode) => void;
@@ -12,17 +13,19 @@ interface QuestionsDBProps {
 }
 
 export default function QuestionsDB({ setMode, mode }: QuestionsDBProps) {
-  const [selecteds, setSelecteds] = useState<number[]>([]);
-  const [filteredExamContent, setFilteredExamContent] = useState<ExamContent[]>(examContent);
+  const { questions } = useAppSelector((state) => state.questions);
+
+  const [selecteds, setSelecteds] = useState<string[]>([]);
+  const [filteredExamContent, setFilteredExamContent] = useState<Questions[]>(questions);
   const [selectedLevel, setSelectedLevel] = useState<string>('all');
   const [selectedImageFilter, setSelectedImageFilter] = useState<string>('all');
 
   useEffect(() => {
     filterExamContent();
-  }, [selectedLevel, selectedImageFilter]);
+  }, [selectedLevel, selectedImageFilter, questions]);
 
   const filterExamContent = () => {
-    let filteredContent = examContent;
+    let filteredContent = questions;
 
     if (selectedLevel !== 'all') {
       filteredContent = filteredContent.filter((content) => content.level === selectedLevel);

@@ -10,7 +10,6 @@ import QuestionsDB from './Content/QuestionsDB';
 import Exam from './Content/Exam';
 import Profile from './Profile';
 import { TestContent } from '@/constants/testContent';
-
 interface MainContentProps {
   isNavCollapsed: boolean;
   setIsNavCollapsed: (value: boolean) => void;
